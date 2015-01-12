@@ -1,0 +1,12 @@
+title: "Why you suck at Photoshop's magic wand"
+datePosted: "2013-10-29T21:37:47.584Z"
+slugs: [
+  "cutting-things-out"
+]
+tags: [
+  "photoshop"
+  "tutorials"
+]
+descriptionMd: """
+  Wondering why those objects you try to cut out from white backgrounds still have a white outline afterwards? Learn what the magic wand's *tolerance* setting does.
+"""

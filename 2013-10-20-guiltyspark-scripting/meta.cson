@@ -1,0 +1,15 @@
+title: "The GuiltySpark script engine"
+datePosted: "2013-10-20T07:45:06.862Z"
+tags: [
+  "guiltyspark"
+  "halo"
+  "software"
+  "ai"
+  "scripting"
+]
+slugs: [
+  "guiltyspark-scripting"
+]
+descriptionMd: """
+  My Halo bot needed to be user-programmable, so I created a scripting language to drive its behaviour. It describes a decision tree where sibling nodes compete for priority, defined as expressions on numeric values from game memory.
+"""

@@ -1,0 +1,16 @@
+title: "The GuiltySpark navigation system"
+datePosted: "2013-10-20T08:52:52.496Z"
+tags: [
+  "guiltyspark"
+  "ai"
+  "navigation"
+  "halo"
+  "software"
+  "pathfinding"
+]
+slugs: [
+  "guiltyspark-navigation"
+]
+descriptionMd: """
+  Mobility is key to GuiltySpark's autonomy. It needs to know its environment and how to navigate it to reach it targets. In this post I cover the navigation graphs GS uses for pathfinding and following.
+"""

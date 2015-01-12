@@ -1,0 +1,19 @@
+title: "Target visibility detection for GuiltySpark: Part 1"
+datePosted: "2013-10-20T10:35:31.575Z"
+tags: [
+  "guiltyspark"
+  "ai"
+  "geometry"
+  "halo"
+  "software"
+  "ray-casting"
+  "reverse-engineering"
+  "cheat-engine"
+]
+slugs: [
+  "guiltyspark-visibility-detection"
+  "guiltyspark-visibility-detection-part-1"
+]
+descriptionMd: """
+  Given that GuiltySpark gets all of its information by reading Halo's memory, how does the bot know when its target is visible or not? In other words, how does it know when it can shoot and hit the target or when there's a wall in the way?
+"""

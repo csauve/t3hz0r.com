@@ -1,0 +1,16 @@
+title: "Intro to GuiltySpark: Autonomous Halo bot"
+datePosted: "2013-10-19T18:22:10.173Z"
+tags: [
+  "guiltyspark"
+  "halo"
+  "software"
+  "ai"
+  "reverse-engineering"
+]
+slugs: [
+  "guiltyspark"
+]
+featured: true
+descriptionMd: """
+  What does it take to make a program that can play Halo PC by itself? As it turns out, a lot. Get introduced to the ambitious project to build an autonomous game-playing bot by simulating keyboard and mouse input.
+"""

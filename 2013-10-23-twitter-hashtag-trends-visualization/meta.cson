@@ -1,0 +1,19 @@
+title: "Twitter hashtag trends visualization"
+datePosted: "2013-10-23T00:37:37.690Z"
+tags: [
+  "twitter"
+  "trends"
+  "hashtags"
+  "software"
+  "data-visualization"
+  "node.js"
+  "python"
+  "angular.js"
+]
+slugs: [
+  "twitter-hashtag-trends-visualization"
+]
+featured: true
+descriptionMd: """
+  My 480c end of term project: what does it look like when you plot Twitter's top hashtags in sentiment, time, and popularity?
+"""
