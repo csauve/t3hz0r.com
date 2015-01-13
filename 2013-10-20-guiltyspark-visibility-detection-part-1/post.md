@@ -1,4 +1,4 @@
-So we have a bot that can [navigate around the map](post/2013-10-20-guiltyspark-navigation) and [make its own decisions](/post/2013-10-20-guiltyspark-scripting), but it's pretty dumb if it can't tell whether or not the target it's aiming at is visible or not. In other words, it needs to know if the line between itself and an opponent player is occluded by level geometry.
+So we have a bot that can [navigate around the map](/post/2013-10-20-guiltyspark-navigation) and [make its own decisions](/post/2013-10-20-guiltyspark-scripting), but it's pretty dumb if it can't tell whether or not the target it's aiming at is visible or not. In other words, it needs to know if the line between itself and an opponent player is occluded by level geometry.
 
 There is a location in Halo's memory that says if you're looking at an opponent. There must be, because when you do it your reticule turns red and the player's name shows up on the screen.
 
