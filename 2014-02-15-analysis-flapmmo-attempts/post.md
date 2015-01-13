@@ -77,7 +77,7 @@ This is a really cool plot because you can see how peoples' best scores form the
 
 ## Dataset
 If you'd like to explore this data yourself, you can download it here:
-* CSV: [flappy_db.csv.7z]http://files.t3hz0r.com/blog/2014/analysis-flapmmo-attempts/flappy_db.csv.7z) (13.1 MB)
+* CSV: [flappy_db.csv.7z](http://files.t3hz0r.com/blog/2014/analysis-flapmmo-attempts/flappy_db.csv.7z) (13.1 MB)
 
 The CSV package comes in two files: **attempts.csv** and **jumps.csv**. Fields in attempts.csv are attemptId, playerId, nick, seed, and date (ISO 8601 datetime UTC format). Fields in jumps.csv are attemptId, sequenceNo (0 based index), and frame. I removed the other fields shown in the Collection section of this article (like x, vy, gameOver) because they're identical for every attempt.
 
