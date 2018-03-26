@@ -1,0 +1,42 @@
+{
+  "name": "t3h-blog",
+  "version": "1.0.0",
+  "description": "Personal blog of Connor Sauve",
+  "main": "src/build.js",
+  "scripts": {
+    "build": "babel-node src/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csauve/blog.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "csauve <connorsauve@gmail.com> (http://t3hz0r.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/csauve/blog/issues"
+  },
+  "homepage": "https://github.com/csauve/blog#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "babelify": "^8.0.0",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-change": "^1.0.0",
+    "gulp-cli": "^2.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.2.1",
+    "highlight.js": "^9.12.0",
+    "marked": "^0.3.19",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}

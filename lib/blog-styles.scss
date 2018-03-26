@@ -1,0 +1,16 @@
+$padding-std: 8px;
+$bg-content: #FFF;
+$fg-content: #303030;
+$fg-minor: #848484;
+$bg-nav: #00f596;
+$fg-accent-primary: blue;
+$fg-accent-secondary: purple;
+$page-width: 900px;
+$font-size-std: 14pt;
+$font-size-small: 12pt;
+$bg-code: #eee;
+$transition-time: 0.1s;
+$fg-header: #4d4d4d;
+
+@import "StandardPage/StandardPage.scss";
+@import "BlogPage/BlogPage.scss";

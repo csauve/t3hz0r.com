@@ -1,0 +1,118 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $bg-content;
+  color: $fg-content;
+  line-height: 1.6em;
+  font-size: $font-size-std;
+  font-family: "Helvetica Neue", "Helvetica";
+}
+
+@keyframes PULSE {
+  0% {font-size: 100%;}
+  50% {font-size: 150%;}
+  100% {font-size: 100%;}
+}
+
+.site-header {
+  font-weight: bold;
+  display: flex;
+  padding: $padding-std 2em;
+  background: $bg-nav;
+
+  #home-link {
+    display: flex;
+    align-content: center;
+    width: 3em;
+    border-bottom: none;
+
+    #z0r {
+      animation-delay: 0.4s;
+    }
+
+    &:hover #t3h, &:hover #z0r {
+      animation-name: PULSE;
+      animation-duration: 0.8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+  }
+
+  a {
+    &:visited {
+      border-bottom: 0.2em solid rgba($fg-accent-primary, 0.3);
+    }
+
+    &:visited:hover {
+      color: $fg-accent-primary;
+    }
+  }
+
+  nav {
+    margin-left: auto;
+    a {
+      margin-left: 2em;
+    }
+  }
+}
+
+main {
+  max-width: $page-width;
+  padding: 0 $padding-std;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: $fg-content;
+  transition: border-bottom-width $transition-time;
+
+  &:link {
+    border-bottom: 0.2em solid rgba($fg-accent-primary, 0.3);
+  }
+
+  &:visited {
+    border-bottom: 0.2em solid rgba($fg-accent-secondary, 0.3);
+  }
+
+  &:hover {
+    border-bottom-width: 0.4em;
+  }
+
+  &:visited:hover {
+    color: $fg-accent-secondary;
+  }
+
+  &:link:hover {
+    color: $fg-accent-primary;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $fg-header;
+  font-weight: 500;
+}
+
+img, video, iframe {
+  max-width: 100%;
+}
+
+code, pre {
+  font-family: Menlo, Consolas, Monaco, monospace;
+  background: $bg-code;
+}
+
+pre {
+  padding: $padding-std;
+  font-size: $font-size-small;
+  line-height: 1.2em;
+  border-left: 3px solid $bg-nav;
+}
+
+hr {
+  border: none;
+  border-bottom: 3px solid $fg-minor;
+}

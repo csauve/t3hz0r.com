@@ -1,0 +1,16 @@
+{
+  "presets": [
+    "react",
+    ["env", {
+      "modules": "commonjs",
+      "loose": true,
+      "targets": {
+        "browsers": "last 2 versions",
+        "node": "current"
+      }
+    }]
+  ],
+  "ignore": [
+    "node_modules/**"
+  ]
+}

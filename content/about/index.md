@@ -1,0 +1,4 @@
+Welcome to my blog! I'm Connor Sauve, a software developer from Victoria, BC with an interest in things both technical and creative. This blog is where I share and document my projects in software, photography, digital art, and gaming. I studied computer science at UVic and did co-ops with [AbeBooks.com](http://www.abebooks.com/), [Chris Upton's VBRC Lab](http://athena.bioc.uvic.ca/), and [Helm Operations](http://www.helmoperations.com/). After graduating in 2014, I returned to work for *AbeBooks.com*.
+
+## Contact
+The best way to get in touch is by email: [contact@t3hz0r.com](mailto:contact@t3hz0r.com). Please contact me if you would like to use any content from this blog elsewhere.
