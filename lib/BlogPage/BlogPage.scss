@@ -27,3 +27,11 @@
     animation-timing-function: ease-in-out;
   }
 }
+
+@media (max-width: 500px) {
+  #home-link {
+    #t3h, #z0r {
+      display: none;
+    }
+  }
+}
