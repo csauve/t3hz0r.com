@@ -12,6 +12,6 @@ During my studies at the _University of Victoria_ I had the pleasure of working 
 Please contact me if you would like to use any content from this blog elsewhere.
 
 ## t3hz0r?
-This blog's name comes from [leetspeak](https://en.wikipedia.org/wiki/Leet) _t3h_ (the) and suffix _-z0r_. For me, it's usage came to represent the co-option and transformation of words into the web domain.
+This blog's name comes from [leetspeak](https://en.wikipedia.org/wiki/Leet) _t3h_ (the) and suffix _-z0r_. For me, its usage came to represent the co-option and transformation of words into the web domain.
 
 This blog is [open source](https://github.com/csauve/blog)!

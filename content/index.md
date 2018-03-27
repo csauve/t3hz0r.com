@@ -1,5 +1,5 @@
-# Hypertext, delivered fresh
-Hi, I'm [Connor Sauve](/about), and welcome to my blog! This is where I share my projects and interests in software, photography, art, and gaming.
+# Hypertext, delivered fresh*
+Hi, I'm [Connor Sauve](/about), and welcome to my blog! This is where I share my projects and interests in software, photography, art, and gaming. New 2018 content coming soon!
 
 ### Posts index
 
@@ -19,3 +19,5 @@ Hi, I'm [Connor Sauve](/about), and welcome to my blog! This is where I share my
 * <time>2013-10-20:</time> [Target visibility detection for GuiltySpark: Part 2](/posts/2013-10-20-guiltyspark-visibility-detection-part-2)
 * <time>2013-10-20:</time> [Target visibility detection for GuiltySpark: Part 1](/posts/2013-10-20-guiltyspark-visibility-detection-part-1)
 * <time>2013-10-19:</time> [Intro to GuiltySpark: Autonomous Halo bot](/posts/2013-10-19-guiltyspark)
+
+<small>* FRESH NOT GUARANTEED （　´_ゝ`)</small>

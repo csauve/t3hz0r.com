@@ -14,8 +14,9 @@ aws s3 sync --delete ./dist s3://t3hz0r.com/
 ```
 
 ## Todo
-* Continuous deployment
+* Solve permalinks & moved content
 * Post footers
 * New content
 * Blogroll/links
-* Permalinks
+* Continuous deployment
+* RSS
