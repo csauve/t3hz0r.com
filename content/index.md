@@ -1,7 +1,7 @@
-# Index
+# Hypertext, delivered fresh
 Hi, I'm [Connor Sauve](/about), and welcome to my blog! This is where I share my projects and interests in software, photography, art, and gaming.
 
-### Posts
+### Posts index
 
 * <time>2015-03-21:</time> [Distance function ray marching in WebGL](/posts/2015-03-21-distance-function-ray-marching-webgl)
 * <time>2014-04-11:</time> [Time-lapse and WebM test](/posts/2014-04-11-time-lapse-and-webm-test)
