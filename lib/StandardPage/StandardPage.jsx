@@ -5,7 +5,8 @@ const StandardPage = ({title, children, styles, scripts, navHeader, navItems}) =
   const pageProps = {
     styles: ["/blog-styles.css", "/atom-one-light.css", ...styles],
     scripts,
-    title: title || "t3hz0r"
+    title: title || "t3hz0r",
+    favicon: "/favicon.png"
   };
 
   return (

@@ -8,7 +8,7 @@ body {
   color: $fg-content;
   line-height: 1.6em;
   font-size: $font-size-std;
-  font-family: "Helvetica Neue", "Helvetica";
+  font-family: $font-family-std;
 }
 
 @keyframes PULSE {
@@ -22,24 +22,6 @@ body {
   display: flex;
   padding: $padding-std 2em;
   background: $bg-nav;
-
-  #home-link {
-    display: flex;
-    align-content: center;
-    width: 3em;
-    border-bottom: none;
-
-    #z0r {
-      animation-delay: 0.4s;
-    }
-
-    &:hover #t3h, &:hover #z0r {
-      animation-name: PULSE;
-      animation-duration: 0.8s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
-    }
-  }
 
   a {
     &:visited {
@@ -61,7 +43,8 @@ body {
 
 main {
   max-width: $page-width;
-  padding: 0 $padding-std;
+  padding: $padding-std;
+  padding-top: 0;
   margin: 0 auto;
 }
 
@@ -101,7 +84,7 @@ img, video, iframe {
 }
 
 code, pre {
-  font-family: Menlo, Consolas, Monaco, monospace;
+  font-family: $font-family-code;
   background: $bg-code;
 }
 

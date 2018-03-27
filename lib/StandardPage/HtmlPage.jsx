@@ -1,6 +1,6 @@
 import React from "react";
 
-const HtmlPage = ({title, children, styles, scripts}) => (
+const HtmlPage = ({title, children, styles, scripts, favicon}) => (
   <html lang="en">
     <head>
       <meta charSet="UTF-8"/>
@@ -9,6 +9,7 @@ const HtmlPage = ({title, children, styles, scripts}) => (
       {styles && styles.map(src =>
         <link key="src" rel="stylesheet" href={src}/>
       )}
+      {favicon && <link rel="icon" type="image/png" href={favicon}/>}
       {title && <title>{title}</title>}
     </head>
     <body>

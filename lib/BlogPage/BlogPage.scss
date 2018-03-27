@@ -3,3 +3,27 @@
     color: $fg-minor;
   }
 }
+
+#home-link {
+  padding-left: 2em;
+  background-image: url("/favicon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  display: flex;
+  align-content: center;
+  width: 3em;
+  border-bottom: none;
+  font-family: $font-family-code;
+
+  #z0r {
+    animation-delay: 0.4s;
+  }
+
+  &:hover #t3h, &:hover #z0r {
+    animation-name: PULSE;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+}

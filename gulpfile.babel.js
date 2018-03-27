@@ -15,7 +15,7 @@ const paths = {
   css: ["./content/**/*.+[scss|css]", "./lib/blog-styles.scss", "./node_modules/highlight.js/styles/atom-one-light.css"],
   scripts: "./content/**/*.+(jsx|js)",
   pages: "./content/**/*.md",
-  copy: ["./content/**/*.!(jsx|js|css|scss|md)", "./lib/*.woff2"],
+  copy: ["./content/**/*.!(jsx|js|css|scss|md)", "./lib/*.woff2", "./lib/favicon.png"],
   dist: "./dist"
 };
 

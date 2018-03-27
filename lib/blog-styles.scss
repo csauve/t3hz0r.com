@@ -11,6 +11,8 @@ $font-size-small: 12pt;
 $bg-code: #eee;
 $transition-time: 0.1s;
 $fg-header: #4d4d4d;
+$font-family-std: "Helvetica Neue", "Helvetica";
+$font-family-code: Menlo, Consolas, Monaco, monospace;
 
 @import "StandardPage/StandardPage.scss";
 @import "BlogPage/BlogPage.scss";
