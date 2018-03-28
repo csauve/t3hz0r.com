@@ -22,8 +22,8 @@ However, I think the best feature was that the bot was that step 2 was user-prog
 
 <iframe width="640" height="480" src="//www.youtube.com/embed/SpogBHQXg5k" frameborder="0" allowfullscreen></iframe>
 
-The bot is about as "skilled" as the average Halo PC player. Read more about [the GuiltySpark scripting engine](/posts/2013-10-20-guiltyspark-scripting).
+The bot is about as "skilled" as the average Halo PC player. Read more about [the GuiltySpark scripting engine](/post/guiltyspark-scripting).
 
-Navigation is done by path finding on a pre-built navigation graph, then simulating combinations of the W, A, S, and D keys to move the player along the path independently of what direction it's facing. I have a post discussing the [navigation system](/posts/2013-10-20-guiltyspark-navigation) specifically.
+Navigation is done by path finding on a pre-built navigation graph, then simulating combinations of the W, A, S, and D keys to move the player along the path independently of what direction it's facing. I have a post discussing the [navigation system](/post/guiltyspark-navigation) specifically.
 
-A big problem I had during implementation was how to determine if the target player is visible or not. Read about my [work to improve visibility detection](/posts/2013-10-20-guiltyspark-visibility-detection-part-1) using ray casting and level geometry extraction.
+A big problem I had during implementation was how to determine if the target player is visible or not. Read about my [work to improve visibility detection](/post/guiltyspark-visibility-detection-part-1) using ray casting and level geometry extraction.

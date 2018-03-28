@@ -1,7 +1,7 @@
 # The GuiltySpark script engine
 <time>2013-10-20</time>
 
-If you're unfamiliar with my old project GuiltySpark, check out this [introductory post](/posts/2013-10-29-guiltyspark). In short, it was an attempt to create a program that played Halo by itself. This post will detail the solution I came up with back in 2010 to drive the behaviour of the bot.
+If you're unfamiliar with my old project GuiltySpark, check out this [introductory post](/post/guiltyspark). In short, it was an attempt to create a program that played Halo by itself. This post will detail the solution I came up with back in 2010 to drive the behaviour of the bot.
 
 At the core of the bot are user-programmable scripts. These are responsible for giving the bot behaviour by reading data from the game memory interface and performing actions like moving the player, aiming, or clicking. The goal of the script engine was to determine which action the bot should be taking at any given time. In order to quickly react to changes in the game environment, the script was run around 100 times per second in its own thread.
 

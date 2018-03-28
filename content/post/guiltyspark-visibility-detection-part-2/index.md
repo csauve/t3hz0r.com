@@ -1,7 +1,7 @@
 # Target visibility detection for GuiltySpark: Part 2
 <time>2013-10-20</time>
 
-In [part 1 of this post](/posts/2013-10-20-guiltyspark-visibility-detection-part-1), I talked about reverse engineering and memory scanning, the problems with GuiltySpark's existing target visibility detection, and how those problems might be solved by performing ray casting in the map's binary space partitioning tree (BSP). This post will cover some of my notes from March 13th 2011, when I had just finished implementing it.
+In [part 1 of this post](/post/guiltyspark-visibility-detection-part-1), I talked about reverse engineering and memory scanning, the problems with GuiltySpark's existing target visibility detection, and how those problems might be solved by performing ray casting in the map's binary space partitioning tree (BSP). This post will cover some of my notes from March 13th 2011, when I had just finished implementing it.
 
 ## Extraction
 There were a few details of Halo's BSP that had me pull my hair out. For example, BSP trees are supposed to recursively subdivide the space into two halves. Halo's BSP nodes have indices for the child nodes on the front and back side of the dividing planes, but sometimes these indices were `-1`. It took me a while to figure out, but I believe this has to do with how Halo generates its BSPs in the first place.
@@ -38,7 +38,7 @@ private void BSPGet_BSP3D_NODES(int count, int pointer) {
 }
 ```
 
-A nice surprise was that the whole BSP extraction was fast--a blink of the eye. Theoretically, I could have implemented the tree traversal on Halo's in-memory BSP without extracting it to my own data structures. However, I thought that this might incur a performance overhead when I was repeatedly performing ray casting, plus I wanted to use it to [generate a navigation mesh](/posts/2013-10-20-guiltyspark-navigation) (which I never implemented). The actual calculations for the ray intersection are fast too.
+A nice surprise was that the whole BSP extraction was fast--a blink of the eye. Theoretically, I could have implemented the tree traversal on Halo's in-memory BSP without extracting it to my own data structures. However, I thought that this might incur a performance overhead when I was repeatedly performing ray casting, plus I wanted to use it to [generate a navigation mesh](/post/guiltyspark-navigation) (which I never implemented). The actual calculations for the ray intersection are fast too.
 
 ## Occlusion Testing
 

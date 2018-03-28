@@ -1,7 +1,7 @@
 # Target visibility detection for GuiltySpark: Part 1
 <time>2013-10-20</time>
 
-So we have a bot that can [navigate around the map](/posts/2013-10-20-guiltyspark-navigation) and [make its own decisions](/posts/2013-10-20-guiltyspark-scripting), but it's pretty dumb if it can't tell whether or not the target it's aiming at is visible or not. In other words, it needs to know if the line between itself and an opponent player is occluded by level geometry.
+So we have a bot that can [navigate around the map](/post/guiltyspark-navigation) and [make its own decisions](/post/guiltyspark-scripting), but it's pretty dumb if it can't tell whether or not the target it's aiming at is visible or not. In other words, it needs to know if the line between itself and an opponent player is occluded by level geometry.
 
 There is a location in Halo's memory that says if you're looking at an opponent. There must be, because when you do it your reticule turns red and the player's name shows up on the screen.
 
@@ -60,4 +60,4 @@ To determine if a surface occludes the ray between two players, start at the roo
 ![](bsp2.jpg)
 ![](bsp3.jpg)
 
-For now, this covers the general idea of extracting the BSP and using it to test target visibility. Please [check out part 2](/posts/2013-10-20-guiltyspark-visibility-detection-part-2) if you're interested in more implementation details.
+For now, this covers the general idea of extracting the BSP and using it to test target visibility. Please [check out part 2](/post/guiltyspark-visibility-detection-part-2) if you're interested in more implementation details.

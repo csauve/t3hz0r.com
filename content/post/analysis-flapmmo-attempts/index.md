@@ -1,7 +1,7 @@
 # Analysis of 419,000 FlapMMO attempts
 <time>2014-02-15</time>
 
-FlapMMO is a new and popular browser game inspired by Flappy Bird. Unlike Flappy Bird, though, each server has hundreds of other players and you can all see each other. It's lots of fun and I previously posted about [hacking FlapMMO for mouse control](/posts/2014-02-14-hacking-flapmmo-mouse-control).
+FlapMMO is a new and popular browser game inspired by Flappy Bird. Unlike Flappy Bird, though, each server has hundreds of other players and you can all see each other. It's lots of fun and I previously posted about [hacking FlapMMO for mouse control](/post/hacking-flapmmo-mouse-control).
 
 When the game's developer started making changes to how data is sent between players, there was a short time that the client saw this:
 
