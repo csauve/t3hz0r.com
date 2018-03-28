@@ -1,7 +1,7 @@
 import React from "react";
 import HtmlPage from "./HtmlPage.jsx";
 
-const StandardPage = ({title, children, styles, scripts, navHeader, navItems}) => {
+const StandardPage = ({title, children, styles, scripts, navHeader, navItems, footerContent}) => {
   const pageProps = {
     styles: ["/blog-styles.css", "/atom-one-light.css", ...styles],
     scripts,
@@ -20,6 +20,9 @@ const StandardPage = ({title, children, styles, scripts, navHeader, navItems}) =
       <main>
         {children}
       </main>
+      {footerContent &&
+        <footer>{footerContent}</footer>
+      }
     </HtmlPage>
   );
 };

@@ -5,9 +5,9 @@ import hljs from "highlight.js";
 
 const navItems = [
   <a key="index" href="/">index</a>,
-  <a key="about" href="/about">about</a>,
   <a key="github" href="https://github.com/csauve?tab=repositories">github</a>,
   <a key="photos" href="https://www.flickr.com/photos/csauve/">photos</a>,
+  <a key="about" href="/about">about</a>,
 ];
 const navHeader = (
   <a id="home-link" href="/">

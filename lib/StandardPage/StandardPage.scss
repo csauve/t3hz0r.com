@@ -11,12 +11,6 @@ body {
   font-family: $font-family-std;
 }
 
-@keyframes PULSE {
-  0% {font-size: 100%;}
-  50% {font-size: 150%;}
-  100% {font-size: 100%;}
-}
-
 .site-header {
   font-weight: bold;
   display: flex;
@@ -78,6 +72,14 @@ h1, h2, h3, h4, h5, h6 {
   color: $fg-header;
   font-weight: 500;
 }
+
+//steps of 0.5/3
+h1 {font-size: 1.50em;}
+h2 {font-size: 1.33em;}
+h3 {font-size: 1.17em;}
+h4 {font-size: 1.00em;}
+h5 {font-size: 0.83em;}
+h6 {font-size: 0.67em;}
 
 img, video, iframe {
   max-width: 100%;

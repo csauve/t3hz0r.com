@@ -4,6 +4,12 @@
   }
 }
 
+@keyframes PULSE {
+  0% {font-size: 100%;}
+  50% {font-size: 150%;}
+  100% {font-size: 100%;}
+}
+
 #home-link {
   padding-left: 2em;
   background-image: url("/favicon.png");
