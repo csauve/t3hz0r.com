@@ -5,21 +5,26 @@ class PhotoZoomIso extends React.Component {
   constructor() {
     super();
     this.toggle = this.toggle.bind(this);
-    this.state = {zoomed: false}
+    this.state = {zoomed: false, zoomable: false};
   }
 
   toggle() {
     this.setState({zoomed: !this.state.zoomed});
   }
 
+  componentDidMount() {
+    this.setState({zoomable: true});
+  }
+
   render() {
     const zoomed = this.state.zoomed;
     return (
-      <a className="photo-zoom" href={this.props.srcFull} onClick={this.toggle}>
-        <img
-          className={zoomed ? "zoomed" : null}
-          src={zoomed ? this.props.srcFull : this.props.srcThumb}
-        />
+      <a
+        className={`photo-zoom${zoomed ? " zoomed" : ""}`}
+        href={this.state.zoomable ? "#" : this.props.srcFull}
+        onClick={this.toggle}
+      >
+        <img src={zoomed ? this.props.srcFull : this.props.srcThumb}/>
       </a>
     );
   }

@@ -2,7 +2,20 @@ a.photo-zoom {
   cursor: pointer;
   border-bottom: none;
 
-  img {
+  //todo: improve styles and interaction
+  &.zoomed {
+    position: fixed;
+    height: 100%;
     width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-height: 90%;
+    }
   }
 }

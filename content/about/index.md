@@ -9,6 +9,7 @@ During my studies at the _University of Victoria_ I had the pleasure of working 
 * **GitHub**: [csauve](https://github.com/csauve)
 * **LinkedIn**: [Connor Sauve](https://www.linkedin.com/in/connor-sauve-44908534)
 * **IRC**: Usually hanging out in _#modacity_ at _irc.gamesurge.net_
+* **flickr**: [csauve](https://www.flickr.com/photos/csauve/)
 
 ## t3hz0r?
 This blog's name comes from [leetspeak](https://en.wikipedia.org/wiki/Leet) _t3h_ (the) and suffix _-z0r_. For me, its usage came to represent the co-option and transformation of words into the web domain.

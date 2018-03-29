@@ -19,7 +19,7 @@ const StandardPage = ({title, children, styles, scripts}) => {
         <nav>
           <a href="/">index</a>
           <a href="https://github.com/csauve?tab=repositories">github</a>
-          <a href="https://www.flickr.com/photos/csauve/">photos</a>
+          <a href="/photos">photos</a>
           <a href="/about">about</a>
         </nav>
       </header>

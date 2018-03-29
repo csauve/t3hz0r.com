@@ -61,6 +61,7 @@ const scripts = () =>
     extensions: [".js", ".jsx"],
     transform: [babelify]
   }))
+  .pipe(rename({extname: ".js"}))
   .pipe(gulp.dest(paths.dist));
 
 const posts = () =>
