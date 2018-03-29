@@ -76,7 +76,7 @@ This is a really cool plot because you can see how peoples' best scores form the
 -------------
 
 ## Links
-* **Alexis Huet** blogged about [Description and modeling of FlapMMO score data](https://ahstat.wordpress.com/2014/03/11/flapmmo/) using 100,000 newly-collected attempts and also comparing to my data set.
+* **Alexis Huet** blogged about [Description and modeling of FlapMMO score data](https://ahstat.github.io/Flap-mmo/) using 100,000 newly-collected attempts and also comparing to my data set.
 * *The Guardian* big data columnist **Siraj Datoo** featured my work in the article [Flappy Bird online: what does the data say?](http://www.theguardian.com/news/2014/mar/03/flappy-bird-what-does-the-data-say)
 
 ## Dataset

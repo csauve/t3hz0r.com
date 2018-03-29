@@ -1,10 +1,10 @@
 import React from "react";
 import HtmlPage from "./HtmlPage.jsx";
 
-const StandardPage = ({title, children, styles, scripts, navHeader, navItems, footerContent}) => {
+const StandardPage = ({title, children, styles, scripts}) => {
   const pageProps = {
     styles: ["/blog-styles.css", "/atom-one-light.css", ...styles],
-    scripts,
+    scripts: ["/blog-scripts.js", ...scripts],
     title: title || "t3hz0r",
     favicon: "/favicon.png"
   };
@@ -12,17 +12,20 @@ const StandardPage = ({title, children, styles, scripts, navHeader, navItems, fo
   return (
     <HtmlPage {...pageProps}>
       <header className="site-header">
-        {navHeader || <a href="/">t3hz0r</a>}
-        {navItems &&
-          <nav>{navItems}</nav>
-        }
+        <a id="home-link" href="/">
+          <span id="t3h">t3h</span>
+          <span id="z0r">z0r</span>
+        </a>
+        <nav>
+          <a href="/">index</a>
+          <a href="https://github.com/csauve?tab=repositories">github</a>
+          <a href="https://www.flickr.com/photos/csauve/">photos</a>
+          <a href="/about">about</a>
+        </nav>
       </header>
       <main>
         {children}
       </main>
-      {footerContent &&
-        <footer>{footerContent}</footer>
-      }
     </HtmlPage>
   );
 };

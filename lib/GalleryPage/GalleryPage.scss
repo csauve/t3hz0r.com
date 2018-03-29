@@ -1,0 +1,28 @@
+.gallery-page {
+
+  .photo-gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+
+    .photo {
+      max-height: 300px;
+      margin: $padding-std / 2;
+      flex-grow: 1;
+
+      display: flex;
+      overflow: hidden;
+      align-items: center;
+      justify-content: center;
+
+      &.o-p {flex-basis: 200px;} //portrait
+      &.o-s {flex-basis: 400px; flex-grow: 2;} //square
+      &.o-l {flex-basis: 500px; flex-grow: 6;} //landscape
+      &.o-w {flex-basis: 900px; flex-grow: 8;} //wide
+
+      .photo-container {
+        flex-grow: 1;
+      }
+    }
+  }
+}

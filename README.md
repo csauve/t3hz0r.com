@@ -14,11 +14,13 @@ aws s3 sync --delete ./dist s3://t3hz0r.com/
 ```
 
 ## Todo
+* YAML front matter
 * Post footers
 * New content
 * Blogroll/links
 * Continuous deployment
 * RSS
+* Script to find dead links
 
 ## License
 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)

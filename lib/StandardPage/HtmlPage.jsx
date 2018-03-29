@@ -7,7 +7,7 @@ const HtmlPage = ({title, children, styles, scripts, favicon}) => (
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <meta httpEquiv="X-UA-Compatible" content="ie=edge"/>
       {styles && styles.map(src =>
-        <link key="src" rel="stylesheet" href={src}/>
+        <link key={src} rel="stylesheet" href={src}/>
       )}
       {favicon && <link rel="icon" type="image/png" href={favicon}/>}
       {title && <title>{title}</title>}
@@ -15,7 +15,7 @@ const HtmlPage = ({title, children, styles, scripts, favicon}) => (
     <body>
       {children}
       {scripts && scripts.map(src =>
-        <script type="application/javascript" src={src}/>
+        <script key={src} type="application/javascript" src={src}/>
       )}
     </body>
   </html>

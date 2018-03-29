@@ -8,15 +8,41 @@ import change from "gulp-change";
 import React from "react";
 import ReactDOMServer from "react-dom/server";
 import rename from "gulp-rename";
+import resize from "gulp-image-resize";
+import fm from "front-matter";
 
-import BlogPage from "./lib/BlogPage/BlogPage.jsx";
+import PostPage from "./lib/PostPage/PostPage.jsx";
+import GalleryPage from "./lib/GalleryPage/GalleryPage.jsx";
 
 const paths = {
-  css: ["./content/**/*.+[scss|css]", "./lib/blog-styles.scss", "./node_modules/highlight.js/styles/atom-one-light.css"],
-  scripts: "./content/**/*.+(jsx|js)",
-  pages: "./content/**/*.md",
-  copy: ["./content/**/*.!(jsx|js|css|scss|md)", "./lib/*.woff2", "./lib/favicon.png"],
+  css: [
+    "./content/**/*.+[scss|css]",
+    "./lib/blog-styles.scss",
+    "./node_modules/highlight.js/styles/atom-one-light.css"
+  ],
+  scripts: [
+    "./lib/blog-scripts.js",
+    "./content/**/*.+(jsx|js)",
+  ],
+  posts: [
+    "./content/@(post|links|about)/**/*.md",
+    "./content/index.md"
+  ],
+  galleries: "./content/@(photos)/**/*.md",
+  thumbnails: "./content/@(photos)/**/*.jpg",
+  copy: [
+    "./content/**/*.!(jsx|js|css|scss|md)",
+    "./lib/*.woff2",
+    "./lib/favicon.png"
+  ],
   dist: "./dist"
+};
+
+const getPageType = function(fileName) {
+  if (fileName.startsWith("/photos/") != -1) {
+
+  }
+  return "post";
 };
 
 //start fresh!
@@ -37,12 +63,32 @@ const scripts = () =>
   }))
   .pipe(gulp.dest(paths.dist));
 
-const pages = () =>
-  gulp.src(paths.pages)
-  .pipe(change((md) =>
-    ReactDOMServer.renderToStaticMarkup(<BlogPage md={md}/>)
-  ))
+const posts = () =>
+  gulp.src(paths.posts)
+  .pipe(change(md => ReactDOMServer.renderToStaticMarkup(<PostPage md={md}/>)))
   .pipe(rename({extname: ".html"}))
+  .pipe(gulp.dest(paths.dist));
+
+const galleries = () =>
+  gulp.src(paths.galleries)
+  .pipe(change(src => {
+    const {attributes, body} = fm(src);
+    const images = attributes.images.map(({src, aspect}) => ({
+      srcFull: src,
+      srcThumb: src.replace(".jpg", ".thumb.jpg"),
+      aspect
+    }));
+    return ReactDOMServer.renderToStaticMarkup(
+      <GalleryPage type="gallery" images={images} md={body}/>
+    );
+  }))
+  .pipe(rename({extname: ".html"}))
+  .pipe(gulp.dest(paths.dist));
+
+const thumbnails = () =>
+  gulp.src(paths.thumbnails)
+  .pipe(resize({height: 600, upscale: false, sharpen: true, imageMagick: true}))
+  .pipe(rename({extname: ".thumb.jpg"}))
   .pipe(gulp.dest(paths.dist));
 
 const copy = () =>
@@ -52,6 +98,15 @@ const copy = () =>
 gulp.task("clean", clean);
 gulp.task("styles", styles);
 gulp.task("scripts", scripts);
-gulp.task("pages", pages);
+gulp.task("posts", posts);
+gulp.task("galleries", galleries);
+gulp.task("thumbnails", thumbnails);
 gulp.task("copy", copy);
-gulp.task("default", gulp.series(clean, gulp.parallel(styles, scripts, pages, copy)));
+gulp.task("default", gulp.series(clean, gulp.parallel(
+  styles,
+  scripts,
+  posts,
+  galleries,
+  thumbnails,
+  copy
+)));

@@ -5,7 +5,6 @@ $fg-minor: #848484;
 $bg-nav: #00f596;
 $fg-accent-primary: blue;
 $fg-accent-secondary: purple;
-$page-width: 900px;
 $font-size-std: 14pt;
 $font-size-small: 12pt;
 $bg-code: #eee;
@@ -14,5 +13,9 @@ $fg-header: #4d4d4d;
 $font-family-std: "Helvetica Neue", "Helvetica";
 $font-family-code: Menlo, Consolas, Monaco, monospace;
 
-@import "StandardPage/StandardPage.scss";
-@import "BlogPage/BlogPage.scss";
+$small-screen-width: 500px;
+
+@import "./StandardPage/StandardPage.scss";
+@import "./PostPage/PostPage.scss";
+@import "./GalleryPage/GalleryPage.scss";
+@import "./PhotoZoom/PhotoZoom.scss";
