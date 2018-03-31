@@ -5,15 +5,18 @@ $fg-minor: #848484;
 $bg-nav: #00f596;
 $fg-accent-primary: blue;
 $fg-accent-secondary: purple;
-$font-size-std: 14pt;
-$font-size-small: 12pt;
+$line-height-std: 1.5em;
+$line-height-code: 1.2em;
+$font-size-std: 20px;
+$font-size-small: 18px;
+$font-size-code: 0.85em;
 $bg-code: #eee;
 $transition-time: 0.1s;
 $fg-header: #4d4d4d;
-$font-family-std: "Helvetica Neue", "Helvetica";
+$font-family-std: "Source Sans Pro", sans-serif;
 $font-family-code: Menlo, Consolas, Monaco, monospace;
 
-$small-screen-width: 500px;
+$small-screen-width: 550px;
 
 @import "./StandardPage/StandardPage.scss";
 @import "./PostPage/PostPage.scss";

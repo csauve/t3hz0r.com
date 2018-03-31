@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body, html {
   margin: 0;
   padding: 0;
@@ -6,7 +10,7 @@ body, html {
 body {
   background: $bg-content;
   color: $fg-content;
-  line-height: 1.6em;
+  line-height: $line-height-std;
   font-size: $font-size-std;
   font-family: $font-family-std;
 }
@@ -19,7 +23,7 @@ body {
 
   a {
     &:visited {
-      border-bottom: 0.2em solid rgba($fg-accent-primary, 0.3);
+      border-bottom: 0.15em solid rgba($fg-accent-primary, 0.25);
     }
 
     &:visited:hover {
@@ -47,15 +51,15 @@ a {
   transition: border-bottom-width $transition-time;
 
   &:link {
-    border-bottom: 0.2em solid rgba($fg-accent-primary, 0.3);
+    border-bottom: 0.15em solid rgba($fg-accent-primary, 0.25);
   }
 
   &:visited {
-    border-bottom: 0.2em solid rgba($fg-accent-secondary, 0.3);
+    border-bottom: 0.15em solid rgba($fg-accent-secondary, 0.25);
   }
 
   &:hover {
-    border-bottom-width: 0.4em;
+    border-bottom-width: 0.35em;
   }
 
   &:visited:hover {
@@ -86,14 +90,23 @@ img, video, iframe {
 
 code, pre {
   font-family: $font-family-code;
+  font-size: $font-size-code;
   background: $bg-code;
+}
+
+code {
+  padding: 0.2em;
 }
 
 pre {
   padding: $padding-std;
-  font-size: $font-size-small;
-  line-height: 1.2em;
+  line-height: $line-height-code;
   border-left: 3px solid $bg-nav;
+  overflow-x: scroll;
+  text-overflow: ellipsis;
+  code {
+    padding: 0;
+  }
 }
 
 hr {
@@ -120,8 +133,8 @@ figure {
 
 figcaption {
   margin: 1em 0;
-  font-size: $font-size-small;
-  line-height: 1.2em;
+  font-size: $font-size-code;
+  line-height: $line-height-code;
 }
 
 @keyframes PULSE {
@@ -159,5 +172,9 @@ figcaption {
     #t3h, #z0r {
       display: none;
     }
+  }
+
+  body {
+    font-size: $font-size-small;
   }
 }
