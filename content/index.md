@@ -1,8 +1,11 @@
 # Hypertext, delivered fresh*
-Hi, I'm [Connor Sauve](/about), and welcome to my blog! This is where I share my projects and interests in software, photography, art, and gaming. New 2018 content coming soon!
+Hi, I'm [Connor Sauve](/about), and welcome to my blog! This is where I share my projects and interests in software, photography, art, and gaming.
 
 ## Posts index
 
+* <time>2018-04-02:</time> [Facets of Software](/post/facets-of-software)
+* <time>2018-04-01:</time> [Diamond and circular dependencies](/post/diamond-and-circular-dependencies)
+* <time>2017-09-19:</time> [Functional JS with Ramda](/post/functional-js-with-ramda)
 * <time>2015-03-21:</time> [Distance function ray marching in WebGL](/post/distance-function-ray-marching-webgl)
 * <time>2014-04-11:</time> [Time-lapse and WebM test](/post/time-lapse-and-webm-test)
 * <time>2014-03-16:</time> [Mushroom house](/post/mushroom-house)
