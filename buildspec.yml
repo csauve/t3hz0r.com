@@ -6,7 +6,7 @@ phases:
       - npm install
   build:
     commands:
-      - npx gulp
+      - npm run build
   post_build:
     commands:
       - aws s3 sync --delete ./dist s3://t3hz0r.com/

@@ -4,7 +4,7 @@
   "description": "Personal blog of Connor Sauve",
   "main": "src/build.js",
   "scripts": {
-    "build": "babel-node src/build.js"
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
