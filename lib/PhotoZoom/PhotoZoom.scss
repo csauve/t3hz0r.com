@@ -1,9 +1,12 @@
-a.photo-zoom {
-  cursor: pointer;
+.photo-zoom {
   border-bottom: none;
 
+  .thumbnail {
+    cursor: zoom-in;
+  }
+
   //todo: improve styles and interaction
-  &.zoomed {
+  .zoom-view {
     position: fixed;
     height: 100%;
     width: 100%;
@@ -13,9 +16,11 @@ a.photo-zoom {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: zoom-out;
 
     img {
-      max-height: 90%;
+      max-height: 100%;
+      max-width: 100%;
     }
   }
 }

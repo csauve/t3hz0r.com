@@ -5,11 +5,15 @@ class PhotoZoomIso extends React.Component {
   constructor() {
     super();
     this.toggle = this.toggle.bind(this);
-    this.state = {zoomed: false, zoomable: false};
+    this.state = {
+      zoomed: false,
+      zoomable: false,
+    };
   }
 
-  toggle() {
+  toggle(e) {
     this.setState({zoomed: !this.state.zoomed});
+    e.preventDefault(); //prevents change of scroll location
   }
 
   componentDidMount() {
@@ -24,7 +28,15 @@ class PhotoZoomIso extends React.Component {
         href={this.state.zoomable ? "#" : this.props.srcFull}
         onClick={this.toggle}
       >
-        <img src={zoomed ? this.props.srcFull : this.props.srcThumb}/>
+        <img className="thumbnail" src={this.props.srcThumb}/>
+        {zoomed &&
+          <div
+            className="zoom-view"
+            onClick={this.toggle}
+          >
+            <img className="full" src={this.props.srcFull}/>
+          </div>
+        }
       </a>
     );
   }
