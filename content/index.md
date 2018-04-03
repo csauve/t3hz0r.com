@@ -3,6 +3,7 @@ Hi, I'm [Connor Sauve](/about), and welcome to my blog! This is where I share my
 
 ## Posts index
 
+* <time>2018-04-03:</time> [Visualizing closed curve inscribed lines](/post/visualizing-closed-curve-inscribed-lines)
 * <time>2018-04-02:</time> [Facets of Software](/post/facets-of-software)
 * <time>2018-04-01:</time> [Diamond and circular dependencies](/post/diamond-and-circular-dependencies)
 * <time>2017-09-19:</time> [Functional JS with Ramda](/post/functional-js-with-ramda)
