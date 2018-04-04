@@ -1,48 +1,44 @@
-import del from "del";
 import gulp from "gulp";
+import del from "del";
 import babel from "gulp-babel";
+import uglify from "gulp-uglify";
 import sass from "gulp-sass";
+import cleanCSS from "gulp-clean-css";
 import browserify from "gulp-browserify";
 import babelify from "babelify";
 import change from "gulp-change";
 import React from "react";
 import ReactDOMServer from "react-dom/server";
 import rename from "gulp-rename";
-import resize from "gulp-image-resize";
 import fm from "front-matter";
 
-import PostPage from "./lib/PostPage/PostPage.jsx";
-import GalleryPage from "./lib/GalleryPage/GalleryPage.jsx";
+import BlogPage from "./lib/BlogPage/BlogPage.jsx";
 
 const paths = {
-  css: [
+  //stylesheets which are sass-processed and minified
+  styles: [
     "./content/**/*.+[scss|css]",
     "./lib/blog-styles.scss",
-    "./node_modules/highlight.js/styles/atom-one-light.css"
+    "./node_modules/highlight.js/styles/atom-one-light.css",
+    "./node_modules/normalize.css/normalize.css"
   ],
+  //scripts which are transpiled, bundled, and minified
   scripts: [
     "./lib/blog-scripts.js",
     "./content/**/*.+(jsx|js)",
   ],
-  posts: [
-    "./content/@(post|links|about)/**/*.md",
-    "./content/index.md"
+  //markdown which are rendered to HTML pages
+  pages: [
+    "./content/**/*.md"
   ],
-  galleries: "./content/@(photos)/**/*.md",
-  thumbnails: "./content/@(photos)/**/*.jpg",
+  //assets which are just copied without modification
   copy: [
     "./content/**/*.!(jsx|js|css|scss|md)",
     "./lib/*.woff2",
     "./lib/favicon.png"
   ],
+  //where all output files end up
   dist: "./dist"
-};
-
-const getPageType = function(fileName) {
-  if (fileName.startsWith("/photos/") != -1) {
-
-  }
-  return "post";
 };
 
 //start fresh!
@@ -50,8 +46,9 @@ const clean = () => del("./dist");
 
 //build distributable CSS
 const styles = () =>
-  gulp.src(paths.css)
+  gulp.src(paths.styles)
   .pipe(sass())
+  .pipe(cleanCSS({compatibility: "ie8"}))
   .pipe(gulp.dest(paths.dist));
 
 //build distributable script bundles
@@ -61,35 +58,19 @@ const scripts = () =>
     extensions: [".js", ".jsx"],
     transform: [babelify]
   }))
+  .pipe(uglify())
   .pipe(rename({extname: ".js"}))
   .pipe(gulp.dest(paths.dist));
 
-const posts = () =>
-  gulp.src(paths.posts)
-  .pipe(change(md => ReactDOMServer.renderToStaticMarkup(<PostPage md={md}/>)))
-  .pipe(rename({extname: ".html"}))
-  .pipe(gulp.dest(paths.dist));
-
-const galleries = () =>
-  gulp.src(paths.galleries)
+const pages = () =>
+  gulp.src(paths.pages)
   .pipe(change(src => {
     const {attributes, body} = fm(src);
-    const images = attributes.images.map(({src, aspect}) => ({
-      srcFull: src,
-      srcThumb: src.replace(".jpg", ".thumb.jpg"),
-      aspect
-    }));
     return ReactDOMServer.renderToStaticMarkup(
-      <GalleryPage type="gallery" images={images} md={body}/>
+      <BlogPage meta={attributes} md={body}/>
     );
   }))
   .pipe(rename({extname: ".html"}))
-  .pipe(gulp.dest(paths.dist));
-
-const thumbnails = () =>
-  gulp.src(paths.thumbnails)
-  .pipe(resize({height: 600, upscale: false, sharpen: true, imageMagick: true}))
-  .pipe(rename({extname: ".thumb.jpg"}))
   .pipe(gulp.dest(paths.dist));
 
 const copy = () =>
@@ -99,15 +80,11 @@ const copy = () =>
 gulp.task("clean", clean);
 gulp.task("styles", styles);
 gulp.task("scripts", scripts);
-gulp.task("posts", posts);
-gulp.task("galleries", galleries);
-gulp.task("thumbnails", thumbnails);
+gulp.task("pages", pages);
 gulp.task("copy", copy);
 gulp.task("default", gulp.series(clean, gulp.parallel(
   styles,
   scripts,
-  posts,
-  galleries,
-  thumbnails,
+  pages,
   copy
 )));

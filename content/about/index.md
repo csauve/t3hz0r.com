@@ -1,3 +1,7 @@
+---
+title: About
+---
+
 # About
 I'm Connor Sauve, a software engineer hailing from beautiful Victoria, Canada. I have an interest in projects both technical and creative, plus a love of the outdoors and travel.
 

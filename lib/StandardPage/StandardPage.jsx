@@ -1,12 +1,12 @@
 import React from "react";
 import HtmlPage from "./HtmlPage.jsx";
 
-const StandardPage = ({title, children, styles, scripts}) => {
+const StandardPage = ({title, children, styles, scripts, favicon, nav}) => {
   const pageProps = {
-    styles: ["/blog-styles.css", "/atom-one-light.css", ...styles],
-    scripts: ["/blog-scripts.js", ...scripts],
+    styles: ["/normalize.css", ...styles],
+    scripts: scripts,
     title: title || "t3hz0r",
-    favicon: "/favicon.png"
+    favicon: favicon || "/favicon.png"
   };
 
   return (
@@ -16,12 +16,7 @@ const StandardPage = ({title, children, styles, scripts}) => {
           <span id="t3h">t3h</span>
           <span id="z0r">z0r</span>
         </a>
-        <nav>
-          <a href="/">index</a>
-          <a href="https://github.com/csauve?tab=repositories">github</a>
-          <a href="/photos">photos</a>
-          <a href="/about">about</a>
-        </nav>
+        {nav}
       </header>
       <main>
         {children}

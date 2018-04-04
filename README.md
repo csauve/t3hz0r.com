@@ -14,11 +14,9 @@ aws s3 sync --delete ./dist s3://t3hz0r.com/
 ```
 
 ## Todo
-* YAML front matter
+* Reduce size of git checkout by deleting photos history
 * Post footers
-* New content
 * Blogroll/links
-* Continuous deployment
 * RSS
 * Script to find dead links
 

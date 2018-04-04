@@ -19,6 +19,4 @@ $font-family-code: Menlo, Consolas, Monaco, monospace;
 $small-screen-width: 550px;
 
 @import "./StandardPage/StandardPage.scss";
-@import "./PostPage/PostPage.scss";
-@import "./GalleryPage/GalleryPage.scss";
-@import "./PhotoZoom/PhotoZoom.scss";
+@import "./BlogPage/BlogPage.scss";

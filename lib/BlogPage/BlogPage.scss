@@ -1,0 +1,20 @@
+$blog-page-width: 700px;
+
+.blog-page {
+  time {
+    color: $fg-minor;
+  }
+
+  &.type-post {
+    margin: 0 auto;
+    max-width: $blog-page-width;
+  }
+
+  &.type-landing {
+    margin: 0 auto;
+    section {
+      max-width: $blog-page-width / 2;
+      padding: 0 1em;
+    }
+  }
+}
