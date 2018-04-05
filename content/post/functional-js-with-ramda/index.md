@@ -150,5 +150,5 @@ state = clearTodos(state);
 ```
 
 ## Links
-* https://github.com/stoeffel/awesome-fp-js
-* https://gist.github.com/csauve/5912c4c58a42052df8300902d4b012ea
+* [Simple stack machine implementation](https://gist.github.com/csauve/5912c4c58a42052df8300902d4b012ea)
+* [Awesome list of functional JS projects](https://github.com/stoeffel/awesome-fp-js)

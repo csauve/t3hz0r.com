@@ -15,7 +15,7 @@ const HtmlPage = ({title, children, styles, scripts, favicon}) => (
     <body>
       {children}
       {scripts && scripts.map(src =>
-        <script key={src} type="application/javascript" src={src}/>
+        src && <script key={src} type="application/javascript" src={src}/>
       )}
     </body>
   </html>

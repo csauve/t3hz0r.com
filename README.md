@@ -14,11 +14,11 @@ aws s3 sync --delete ./dist s3://t3hz0r.com/
 ```
 
 ## Todo
-* Reduce size of git checkout by deleting photos history
 * Post footers
 * Blogroll/links
 * RSS
 * Script to find dead links
+* Auto parsing of headers using [commonmark-headers?](https://www.npmjs.com/package/commonmark-helpers)
 
 ## License
 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)

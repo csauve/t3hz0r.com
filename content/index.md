@@ -1,7 +1,11 @@
 # Hypertext, delivered fresh*
 Hi, I'm [Connor Sauve](/about), and welcome to my blog! This is where I share my projects and interests in software, photography, art, and gaming.
 
+<small>* FRESH NOT GUARANTEED （　´_ゝ`)</small>
+
 ## Posts index
+
+<nav>
 
 * <time>2018-04-03:</time> [Visualizing closed curve inscribed lines](/post/visualizing-closed-curve-inscribed-lines)
 * <time>2018-04-02:</time> [Facets of Software](/post/facets-of-software)
@@ -24,4 +28,4 @@ Hi, I'm [Connor Sauve](/about), and welcome to my blog! This is where I share my
 * <time>2013-10-20:</time> [Target visibility detection for GuiltySpark: Part 1](/post/guiltyspark-visibility-detection-part-1)
 * <time>2013-10-19:</time> [Intro to GuiltySpark: Autonomous Halo bot](/post/guiltyspark)
 
-<small>* FRESH NOT GUARANTEED （　´_ゝ`)</small>
+</nav>

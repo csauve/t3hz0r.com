@@ -38,23 +38,17 @@ body {
   }
 }
 
-main {
-  padding: $padding-std;
-  padding-top: 0;
-  margin: 0 auto;
-}
-
 a {
   text-decoration: none;
   color: $fg-content;
   transition: border-bottom-width $transition-time;
 
   &:link {
-    border-bottom: 0.15em solid rgba($fg-accent-primary, 0.25);
+    border-bottom: 0.15em solid rgba($fg-accent-primary, $faded-opacity);
   }
 
   &:visited {
-    border-bottom: 0.15em solid rgba($fg-accent-secondary, 0.25);
+    border-bottom: 0.15em solid rgba($fg-accent-secondary, $faded-opacity);
   }
 
   &:hover {
@@ -92,7 +86,7 @@ img, video, iframe, canvas {
 code, pre {
   font-family: $font-family-code;
   font-size: $font-size-code;
-  background: $bg-code;
+  background: $bg-inset;
 }
 
 code {
@@ -102,7 +96,7 @@ code {
 pre {
   padding: 1em;
   line-height: $line-height-code;
-  border-left: 3px solid $bg-nav;
+  border-left: 3px solid $panel-border-color;
   overflow-x: scroll;
   code {
     padding: 0;
@@ -126,7 +120,7 @@ aside {
 
 figure {
   display: inline-block;
-  background: $bg-code;
+  background: $bg-inset;
   padding: 0 1em;
   margin: 1em 0;
 }

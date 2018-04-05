@@ -6,15 +6,9 @@ $blog-page-width: 700px;
   }
 
   &.type-post {
-    margin: 0 auto;
+    padding: $padding-std;
+    padding-top: 0;
     max-width: $blog-page-width;
-  }
-
-  &.type-landing {
     margin: 0 auto;
-    section {
-      max-width: $blog-page-width / 2;
-      padding: 0 1em;
-    }
   }
 }
