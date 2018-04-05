@@ -1,6 +1,8 @@
 # Distance function ray marching in WebGL
 <time>2015-03-21</time>
 
+<figure style="width: 100%; height: 300px" class="render-fs" data-fs-src="shaders/demo.glsl"></figure>
+
 Using distance functions and ray marching to render scenes is nothing new, but I wanted to try it myself. Most of the demos at [shadertoy.com](http://shadertoy.com) use this technique, and I've always been impressed by how such [beautifully rendered scenes](https://www.shadertoy.com/view/MdX3Rr) can be made using at most a few hundred lines of GLSL.
 
 In these types of renderers, the only geometry loaded into the GPU is a single plane between the points (-1, -1, 0) and (1, 1, 0). All the vertex shader has to do is pass these X & Y coordinates through unmodified to `gl_Position` and the plane will cover the screen:
@@ -34,7 +36,7 @@ void main() {
 }
 ```
 
-<shader-demo fsSrc="shaders/first.glsl"></shader-demo>
+<!-- <figure class="render-fs" data-fs-src="shaders/first.glsl"></figure> -->
 
 This should make some intuitive sense. What we're outputting is a 4 component vector (RGBA) expecting values in the range [0, 1], and the red and green channels vary based on the screen pixel coordinates. The `smoothstep` function just maps the [-1, 1] bounds of a sine wave to [0, 1].
 
@@ -54,7 +56,7 @@ void main() {
 }
 ```
 
-<figure class="fs-demo" data-fs-src="shaders/basic.glsl"></figure>
+<!-- <figure class="render-fs" data-fs-src="shaders/basic.glsl"></figure> -->
 
 ## Ray Casting & Marching
 Now that we can render a different colour for each pixel of the screen, we can draw a 3D scene on the 2D surface using a more complex fragment shader.
@@ -152,7 +154,7 @@ void main() {
 }
 ```
 
-<figure class="fs-demo" data-fs-src="shaders/marching.glsl"></figure>
+<!-- <figure class="render-fs" data-fs-src="shaders/marching.glsl"></figure> -->
 
 ## Further Effects
 
@@ -163,10 +165,8 @@ void main() {
 
 Here's a demo incorporating reflections, ambient occlusion, soft shadows, surface shading, animation, and post processing:
 
-<figure class="fs-demo" data-fs-src="shaders/demo.glsl"></figure>
+<!-- <figure class="render-fs" data-fs-src="shaders/demo.glsl"></figure> -->
 
 [Source](https://github.com/csauve/webgl-sandbox/blob/master/shaders/demo.glsl)
 
 Happy shading :)
-
-<script src="fs-demo.js"></script>
