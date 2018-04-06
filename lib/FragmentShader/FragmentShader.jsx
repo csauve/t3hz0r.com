@@ -1,65 +1,78 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Dimensions from "react-dimensions";
-import {initProgram, makeShader, renderLoop, plane, vertexShader} from "./gl.js";
+import * as THREE from "three";
+
+const vertexShader = `
+  attribute vec3 position;
+  varying vec2 uv;
+
+  void main() {
+    gl_Position = vec4(position, 1.0);
+    uv = position.xy;
+  }
+`;
 
 class FragmentShader extends React.PureComponent {
   constructor() {
     super();
-    this.init = this.init.bind(this);
-    this.state = {
-      startTime: new Date().getTime()
+    this.startTime = new Date().getTime();
+  }
+
+  init() {
+    console.log("Initializing fragment shader");
+    const scene = new THREE.Scene();
+    const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 1, 1000);
+    const geometry = new THREE.PlaneGeometry(2, 2, 1, 1);
+    const material = new THREE.RawShaderMaterial({
+      uniforms: {
+        timeSec: {value: (new Date().getTime() - this.startTime) / 1000},
+        canvasSize: {value: new THREE.Vector2(this.props.containerWidth, this.props.containerHeight)}
+      },
+      vertexShader,
+      fragmentShader: this.props.fsSrc
+    });
+    const plane = new THREE.Mesh(geometry, material);
+    scene.add(plane);
+
+    this.renderer = new THREE.WebGLRenderer({
+      canvas: this.canvas,
+      stencil: false,
+      depth: false,
+      alpha: true,
+    });
+
+    this.resize();
+
+    const animate = () => {
+      material.uniforms.timeSec.value = (new Date().getTime() - this.startTime) / 1000;
+      material.uniforms.canvasSize.value = new THREE.Vector2(this.props.containerWidth, this.props.containerHeight);
+      this.renderer.render(scene, camera);
+      requestAnimationFrame(animate);
     };
+    animate();
   }
 
   componentDidMount() {
     this.init();
   }
 
-  componentDidUpdate() {
-    this.init();
-  };
-
-  init() {
-    console.log("Initializing fragment shader");
-    const fsContent = this.props.fsSrc;
-    const canvas = this.canvas;
-
-    try {
-      var gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-      gl.clearColor(0.0, 0.0, 0.0, 1.0);
-      gl.enable(gl.DEPTH_TEST);
-      gl.depthFunc(gl.LEQUAL);
-
-      var program = initProgram(gl, vertexShader, fsContent);
-      var vbo = gl.createBuffer();
-      gl.bindBuffer(gl.ARRAY_BUFFER, vbo);
-      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(plane), gl.STATIC_DRAW);
-      program.positionAttrib = gl.getAttribLocation(program, "position");
-      gl.enableVertexAttribArray(program.positionAttrib);
-      gl.vertexAttribPointer(program.positionAttrib, 3, gl.FLOAT, false, 0, 0);
-
-      gl.uniform2f(gl.getUniformLocation(program, "canvasSize"), this.props.containerWidth, this.props.containerHeight);
-
-      renderLoop(this.state.startTime, gl, canvas, program);
-    } catch (err) {
-      this.setState({err});
-    }
+  resize() {
+    //changes the canvas size and GL context viewport
+    this.renderer.setSize(this.props.containerWidth, this.props.containerHeight);
   }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.fsSrc != this.props.fsSrc) {
+      this.init();
+    } else {
+      this.resize();
+    }
+  };
 
   render() {
     return (
-      <div className="fragment-shader">
-        {this.state.err ? (
-          <p>{err.message}<br/>{err.stack}</p>
-        ) : (
-          <canvas
-            ref={ref => this.canvas = ref}
-            width={this.props.containerWidth}
-            height={this.props.containerHeight}
-          />
-        )}
-      </div>
+      <canvas ref={ref => this.canvas = ref}/>
     );
   }
 }

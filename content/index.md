@@ -29,3 +29,5 @@ Hi, I'm [Connor Sauve](/about), and welcome to my blog! This is where I share my
 * <time>2013-10-19:</time> [Intro to GuiltySpark: Autonomous Halo bot](/post/guiltyspark)
 
 </nav>
+
+<div class="landing-background render-fs" data-fs-src="background.glsl"></div>
