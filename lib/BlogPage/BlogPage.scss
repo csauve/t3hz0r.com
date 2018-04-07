@@ -25,3 +25,17 @@ $blog-page-width: 700px;
     margin: 0;
   }
 }
+
+//link protocol styling:
+
+a[href^="http:"]:after {
+  content: "🔓";
+  vertical-align: super;
+  font-size: 50%;
+}
+
+a[href^="mailto:"]:after {
+  content: "📧";
+  vertical-align: super;
+  font-size: 50%;
+}

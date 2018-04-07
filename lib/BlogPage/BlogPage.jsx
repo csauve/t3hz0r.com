@@ -5,8 +5,9 @@ import {renderMd, findHeader} from "../common/markdown.js";
 const nav = (
   <nav>
     <a href="/">index</a>
-    <a href="https://github.com/csauve?tab=repositories">github</a>
+    <a href="https://github.com/csauve?tab=repositories">code</a>
     <a href="https://www.flickr.com/photos/csauve/">photos</a>
+    <a href="/links">links</a>
     <a href="/about">about</a>
   </nav>
 );

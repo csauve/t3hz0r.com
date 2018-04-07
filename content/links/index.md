@@ -1,0 +1,13 @@
+# Curated `href`s
+Here are some interesting blogs and other content I've found around the web...
+
+<img alt="Surfing the web" src="surf.gif"/>
+
+## Blogs
+* https://waitbutwhy.com
+* https://www.troyhunt.com
+* https://wunkolo.tumblr.com
+
+## Art & comics
+* https://www.xkcd.com
+* http://deesthetic.tumblr.com

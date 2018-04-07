@@ -162,6 +162,10 @@ figcaption {
 }
 
 @media (max-width: $small-screen-width) {
+  .site-header nav a {
+    margin-right: 0.5em;
+  }
+
   #home-link {
     #t3h, #z0r {
       display: none;
