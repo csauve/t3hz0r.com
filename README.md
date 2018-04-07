@@ -14,11 +14,11 @@ aws s3 sync --delete ./dist s3://t3hz0r.com/
 ```
 
 ## Todo
-* Post footers
-* Blogroll/links
+* Hash assets for cache-busting
 * RSS
+* Blogroll/links
+* Post footers
 * Script to find dead links
-* Auto parsing of headers using [commonmark-headers?](https://www.npmjs.com/package/commonmark-helpers)
 
 ## License
 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)

@@ -1,3 +1,8 @@
+---
+pageProps:
+  title: Blog
+---
+
 # Hypertext, delivered fresh*
 Hi, I'm [Connor Sauve](/about), and welcome to my blog! This is where I share my projects and interests in software, photography, art, and gaming.
 
