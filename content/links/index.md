@@ -7,6 +7,7 @@ Here are some interesting blogs and other content I've found around the web...
 * https://waitbutwhy.com
 * https://www.troyhunt.com
 * https://wunkolo.tumblr.com
+* http://www.skynettoday.com/
 
 ## Art & comics
 * https://www.xkcd.com
