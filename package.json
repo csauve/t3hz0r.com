@@ -29,10 +29,11 @@
     "babelify": "^8.0.0",
     "commonmark-helpers": "^0.4.1",
     "del": "^3.0.0",
+    "envify": "^4.1.0",
     "front-matter": "^2.3.0",
     "gulp": "^4.0.0",
     "gulp-babel": "^7.0.1",
-    "gulp-browserify": "^0.5.1",
+    "gulp-bro": "^1.0.3",
     "gulp-change": "^1.0.0",
     "gulp-clean-css": "^3.9.3",
     "gulp-cli": "^2.0.1",
@@ -42,10 +43,12 @@
     "highlight.js": "^9.12.0",
     "markdown-it": "^8.4.1",
     "markdown-it-emoji": "^1.4.0",
+    "markdown-it-katex": "^2.0.3",
     "normalize.css": "^8.0.0",
     "react": "^16.2.0",
     "react-dimensions": "^1.3.1",
     "react-dom": "^16.2.0",
+    "source-sans-pro": "git://github.com/adobe-fonts/source-sans-pro.git#release",
     "three": "^0.91.0"
   }
 }

@@ -2,10 +2,11 @@ import gulp from "gulp";
 import del from "del";
 import babel from "gulp-babel";
 import uglify from "gulp-uglify";
+import envify from "envify/custom";
 import sass from "gulp-sass";
 import cleanCSS from "gulp-clean-css";
-import browserify from "gulp-browserify";
 import babelify from "babelify";
+import bro from "gulp-bro";
 import change from "gulp-change";
 import React from "react";
 import ReactDOMServer from "react-dom/server";
@@ -19,8 +20,6 @@ const paths = {
   styles: [
     "./content/**/*.+[scss|css]",
     "./lib/blog-styles.scss",
-    "./node_modules/highlight.js/styles/atom-one-light.css",
-    "./node_modules/normalize.css/normalize.css"
   ],
   //scripts which are transpiled, bundled, and minified
   scripts: [
@@ -34,8 +33,13 @@ const paths = {
   //assets which are just copied without modification
   copy: [
     "./content/**/*.!(jsx|js|css|scss|md)",
-    "./lib/*.woff2",
-    "./lib/favicon.png"
+    "./lib/favicon.png",
+    "./node_modules/highlight.js/styles/atom-one-light.css",
+    "./node_modules/normalize.css/normalize.css",
+    "./node_modules/+(katex)/dist/katex.min.css",
+    "./node_modules/+(katex)/dist/fonts/*",
+    "./node_modules/+(source-sans-pro)/source-sans-pro.css",
+    "./node_modules/+(source-sans-pro)/**/*.+(woff|woff2|otf|ttf|eot)",
   ],
   //where all output files end up
   dist: "./dist"
@@ -52,11 +56,14 @@ const styles = () =>
   .pipe(gulp.dest(paths.dist));
 
 //build distributable script bundles
-const scripts = () =>
+const scripts = (cb) =>
   gulp.src(paths.scripts)
-  .pipe(browserify({
+  .pipe(bro({
     extensions: [".js", ".jsx"],
-    transform: [babelify]
+    transform: [
+      babelify,
+      [envify({NODE_ENV: "production"}), {global: true}]
+    ]
   }))
   .pipe(uglify())
   .pipe(rename({extname: ".js"}))

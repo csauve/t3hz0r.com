@@ -20,8 +20,17 @@ const BlogPage = ({md, meta}) => {
 
   const blogProps = {
     ...pageProps,
-    scripts: ["/blog-scripts.js", ...pageProps.scripts],
-    styles: ["/blog-styles.css", "/atom-one-light.css", ...pageProps.styles],
+    scripts: [
+      "/blog-scripts.js",
+      ...pageProps.scripts
+    ],
+    styles: [
+      "/blog-styles.css",
+      "/atom-one-light.css",
+      "/katex/dist/katex.min.css",
+      "/source-sans-pro/source-sans-pro.css",
+      ...pageProps.styles
+    ],
     title: `${pageProps.title || postTitle || "Blog"} - t3hz0r`,
   };
 

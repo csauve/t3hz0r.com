@@ -6,6 +6,7 @@ Here are some interesting blogs and other content I've found around the web...
 ## Blogs
 * https://waitbutwhy.com
 * https://www.troyhunt.com
+* http://jamie-wong.com/
 * https://wunkolo.tumblr.com
 * http://www.skynettoday.com/
 

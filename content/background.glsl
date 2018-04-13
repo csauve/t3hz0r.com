@@ -14,8 +14,9 @@ bool scene(vec2 pt, float t) {
 
 void main() {
   bool hit = scene(gl_FragCoord.xy, timeSec);
+  float fadeIn = min(1.0, timeSec / 1.0);
   if (hit) {
-    gl_FragColor = vec4(1.0, 0.0, 1.0, 0.08);
+    gl_FragColor = vec4(1.0, 0.0, 1.0, 0.08 * fadeIn);
   } else {
     gl_FragColor = vec4(0.0);
   }
