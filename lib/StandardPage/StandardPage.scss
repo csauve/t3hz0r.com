@@ -125,6 +125,13 @@ figure {
   margin: 1em 0;
 }
 
+blockquote {
+  font-style: italic;
+  background: $bg-inset;
+  margin: 1em;
+  padding: 0.01 1em;
+}
+
 figcaption {
   margin: 1em 0;
   font-size: $font-size-code;
