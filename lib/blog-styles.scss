@@ -1,24 +1,2 @@
-$padding-std: 8px;
-$bg-content: #FFF;
-$fg-content: #303030;
-$fg-minor: #848484;
-$bg-nav: #eee;
-$panel-border-color: #d5d5d5;
-$fg-accent-primary: blue;
-$fg-accent-secondary: purple;
-$faded-opacity: 0.3;
-$line-height-std: 1.5em;
-$line-height-code: 1.2em;
-$font-size-std: 20px;
-$font-size-small: 18px;
-$font-size-code: 0.85em;
-$bg-inset: #eee;
-$transition-time: 0.1s;
-$fg-header: #4d4d4d;
-$font-family-std: "Source Sans Pro", sans-serif;
-$font-family-code: Menlo, Consolas, Monaco, monospace;
-
-$small-screen-width: 550px;
-
-@import "./StandardPage/StandardPage.scss";
+@import "../node_modules/t3h-ui/lib/t3h-styles.scss";
 @import "./BlogPage/BlogPage.scss";

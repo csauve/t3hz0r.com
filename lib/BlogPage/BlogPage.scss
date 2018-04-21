@@ -1,4 +1,33 @@
-$blog-page-width: 700px;
+@keyframes PULSE {
+  0% {font-size: 100%;}
+  50% {font-size: 150%;}
+  100% {font-size: 100%;}
+}
+
+#home-link {
+  padding-left: 2em;
+  background-image: url("/t3h-assets/favicon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+
+  display: flex;
+  align-content: center;
+  width: 3em;
+  border-bottom: none;
+  font-family: $font-family-code;
+
+  #z0r {
+    animation-delay: 0.4s;
+  }
+
+  &:hover #t3h, &:hover #z0r {
+    animation-name: PULSE;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+}
 
 .blog-page {
   time {
@@ -8,7 +37,7 @@ $blog-page-width: 700px;
   &.type-post {
     padding: $padding-std;
     padding-top: 0;
-    max-width: $blog-page-width;
+    max-width: $max-reading-content-width;
     margin: 0 auto;
   }
 }
@@ -31,4 +60,12 @@ a[href^="mailto:"]:after {
   content: "📧";
   vertical-align: super;
   font-size: 50%;
+}
+
+@media (max-width: $small-screen-width) {
+  #home-link {
+    #t3h, #z0r {
+      display: none;
+    }
+  }
 }

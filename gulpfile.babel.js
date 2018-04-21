@@ -1,18 +1,9 @@
 import gulp from "gulp";
-import del from "del";
-import babel from "gulp-babel";
-import uglify from "gulp-uglify";
-import envify from "envify/custom";
-import sass from "gulp-sass";
-import cleanCSS from "gulp-clean-css";
-import babelify from "babelify";
-import bro from "gulp-bro";
 import change from "gulp-change";
-import React from "react";
-import ReactDOMServer from "react-dom/server";
 import rename from "gulp-rename";
 import fm from "front-matter";
-
+import {buildStyles, buildScripts, buildClean, buildCopy} from "t3h-ui/lib/gulp-jobs.js";
+import {renderDocStatic} from "t3h-ui/lib/server.js";
 import BlogPage from "./lib/BlogPage/BlogPage.jsx";
 
 const paths = {
@@ -33,65 +24,32 @@ const paths = {
   //assets which are just copied without modification
   copy: [
     "./content/**/*.!(jsx|js|css|scss|md)",
-    "./lib/favicon.png",
+    "./node_modules/t3h-ui/lib/+(t3h-assets)/**/*",
     "./node_modules/highlight.js/styles/atom-one-light.css",
-    "./node_modules/normalize.css/normalize.css",
     "./node_modules/+(katex)/dist/katex.min.css",
     "./node_modules/+(katex)/dist/fonts/*",
-    "./node_modules/+(source-sans-pro)/source-sans-pro.css",
-    "./node_modules/+(source-sans-pro)/**/*.+(woff|woff2|otf|ttf|eot)",
   ],
   //where all output files end up
   dist: "./dist"
 };
 
-//start fresh!
-const clean = () => del("./dist");
-
-//build distributable CSS
-const styles = () =>
-  gulp.src(paths.styles)
-  .pipe(sass())
-  .pipe(cleanCSS({compatibility: "ie8"}))
-  .pipe(gulp.dest(paths.dist));
-
-//build distributable script bundles
-const scripts = (cb) =>
-  gulp.src(paths.scripts)
-  .pipe(bro({
-    extensions: [".js", ".jsx"],
-    transform: [
-      babelify,
-      [envify({NODE_ENV: "production"}), {global: true}]
-    ]
-  }))
-  .pipe(uglify())
-  .pipe(rename({extname: ".js"}))
-  .pipe(gulp.dest(paths.dist));
-
 const pages = () =>
   gulp.src(paths.pages)
   .pipe(change(src => {
     const {attributes, body} = fm(src);
-    return ReactDOMServer.renderToStaticMarkup(
-      <BlogPage meta={attributes} md={body}/>
-    );
+    return renderDocStatic(BlogPage, {meta: attributes, md: body});
   }))
   .pipe(rename({extname: ".html"}))
   .pipe(gulp.dest(paths.dist));
 
-const copy = () =>
-  gulp.src(paths.copy)
-  .pipe(gulp.dest(paths.dist));
-
-gulp.task("clean", clean);
-gulp.task("styles", styles);
-gulp.task("scripts", scripts);
+gulp.task("clean", buildClean(paths.dist));
+gulp.task("styles", buildStyles(paths.styles, paths.dist));
+gulp.task("scripts", buildScripts(paths.scripts, paths.dist));
+gulp.task("copy", buildCopy(paths.copy, paths.dist));
 gulp.task("pages", pages);
-gulp.task("copy", copy);
-gulp.task("default", gulp.series(clean, gulp.parallel(
-  styles,
-  scripts,
-  pages,
-  copy
+gulp.task("default", gulp.series("clean", gulp.parallel(
+  "styles",
+  "scripts",
+  "pages",
+  "copy"
 )));

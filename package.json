@@ -14,7 +14,7 @@
     "blog"
   ],
   "author": "csauve <contact@t3hz0r.com> (http://t3hz0r.com)",
-  "license": "CC BY-NC 4.0",
+  "license": "CC-BY-NC-4.0",
   "bugs": {
     "url": "https://github.com/csauve/blog/issues"
   },
@@ -25,30 +25,21 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
-    "babel-register": "^6.26.0",
-    "babelify": "^8.0.0",
     "commonmark-helpers": "^0.4.1",
-    "del": "^3.0.0",
-    "envify": "^4.1.0",
     "front-matter": "^2.3.0",
     "gulp": "^4.0.0",
-    "gulp-babel": "^7.0.1",
-    "gulp-bro": "^1.0.3",
     "gulp-change": "^1.0.0",
-    "gulp-clean-css": "^3.9.3",
     "gulp-cli": "^2.0.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.2.1",
     "gulp-uglify": "^3.0.0",
     "highlight.js": "^9.12.0",
     "markdown-it": "^8.4.1",
     "markdown-it-emoji": "^1.4.0",
     "markdown-it-katex": "^2.0.3",
-    "normalize.css": "^8.0.0",
     "react": "^16.2.0",
     "react-dimensions": "^1.3.1",
-    "react-dom": "^16.2.0",
-    "source-sans-pro": "git://github.com/adobe-fonts/source-sans-pro.git#release",
+    "react-dom": "^16.3.2",
+    "t3h-ui": "git@github.com:csauve/t3h-ui.git",
     "three": "^0.91.0"
   }
 }
