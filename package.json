@@ -39,7 +39,7 @@
     "react": "^16.2.0",
     "react-dimensions": "^1.3.1",
     "react-dom": "^16.3.2",
-    "t3h-ui": "git@github.com:csauve/t3h-ui.git",
+    "t3h-ui": "https://s3.amazonaws.com/csauve-npm-packages/t3h-ui-0.0.1.tgz",
     "three": "^0.91.0"
   }
 }
