@@ -7,7 +7,6 @@ During my studies at the _University of Victoria_ I had the pleasure of working 
 * **Email**: [contact@t3hz0r.com](mailto:contact@t3hz0r.com)
 * **GPG key**: [csauve-pubkey.txt](csauve-pubkey.txt) ([ID](csauve-pubkey-id.txt))
 * **Mastodon**: [@csauve@mastodon.social](https://mastodon.social/@csauve)
-* **IRC**: Usually hanging out in _#modacity_ at _irc.gamesurge.net_
 * **GitHub**: [github.com/csauve](https://github.com/csauve)
 * **flickr**: [flickr.com/photos/csauve](https://www.flickr.com/photos/csauve/)
 * **LinkedIn**: [Connor Sauve](https://www.linkedin.com/in/connor-sauve-44908534)
