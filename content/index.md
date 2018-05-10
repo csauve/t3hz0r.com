@@ -12,6 +12,7 @@ Hi, I'm [Connor Sauve](/about), and welcome to my blog! This is where I share my
 
 <nav>
 
+* <time>2018-05-09:</time> [Can Google be trusted with our digital wellbeing?](/post/google-digital-wellbeing)
 * <time>2018-04-13:</time> [I thought I knew the web](/post/i-thought-i-knew-the-web)
 * <time>2018-04-03:</time> [Visualizing closed curve inscribed lines](/post/visualizing-closed-curve-inscribed-lines)
 * <time>2018-04-02:</time> [Facets of Software](/post/facets-of-software)
