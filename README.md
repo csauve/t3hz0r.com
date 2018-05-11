@@ -2,21 +2,23 @@
 Blog content and static site generator for my personal blog, https://t3hz0r.com.
 
 ## Building and deploying
+Pushing changes on `master` will cause CodePipeline to build and deploy the site. The same process can also be run locally:
+
 ```sh
+# install build dependencies
 npm install
 
-# build & testing:
-npx gulp
-npx gulp && http-server ./dist/
+# build static content & test it
+npm run build
+http-server ./dist/
 
-# deploy to prod
+# ship it!
 aws s3 sync --delete ./dist s3://t3hz0r.com/
 ```
 
 ## Todo
 * Hash assets for cache-busting
 * RSS
-* Blogroll/links
 * Post footers
 * Script to find dead links
 

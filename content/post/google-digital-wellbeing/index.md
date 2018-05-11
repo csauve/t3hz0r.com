@@ -28,7 +28,7 @@ I just hope we don't get to the point of "OK Google: call grandma and wish her a
 ### Personalized maps and news
 Other announcements included a [more personalized maps experience][5] and [AI-driven news aggregation][6]. I have [already covered][7] my thoughts on personalization and aggregators. In short, I feel that the results can become an echo of yourself or a community, with little diverse perspective. It takes an active effort to seek out other perspectives, and we can't rely on a passive system to do it for us. Sometimes we don't know what we like until we try it.
 
-Until the point where users become frustrated, there is little incentive for such systems to optimize for your needs and every incentive to optimize for the platforms's.
+Until the point where users become frustrated, there is little incentive for such systems to optimize for your needs and every incentive to optimize for the platform's.
 
 The Google News announcement promises to keep us fully informed on the most important headlines, using sources we trust. But it also raises questions:
 
