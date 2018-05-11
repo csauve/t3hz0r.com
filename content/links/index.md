@@ -4,6 +4,7 @@ Here are some interesting blogs and other content I've found around the web...
 <img alt="Surfing the web" src="surf.gif"/>
 
 ## Blogs
+* http://shaderbits.com/blog/
 * https://waitbutwhy.com
 * https://www.troyhunt.com
 * http://jamie-wong.com/
