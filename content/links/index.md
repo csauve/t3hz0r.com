@@ -4,6 +4,7 @@ Here are some interesting blogs and other content I've found around the web...
 <img alt="Surfing the web" src="surf.gif"/>
 
 ## Blogs
+* https://0xadada.pub/
 * https://grumpy.website/
 * http://shaderbits.com/blog/
 * https://waitbutwhy.com
