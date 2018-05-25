@@ -20,6 +20,7 @@ aws s3 sync --delete ./dist s3://t3hz0r.com/
 * Hash assets for cache-busting
 * RSS
 * Post footers
+* QR code to open page on mobile
 * Script to find dead links
 
 ## License
