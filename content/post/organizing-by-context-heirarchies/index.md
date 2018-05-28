@@ -17,14 +17,14 @@ But what causes a collection to grow into a dump instead of a library, even when
 ## Tagging
 What about tagging? Lots of software supports it, and it has reasonable analogues in the real world like coloured sticky notes.
 
-I see tagging as a flexible organization strategy, but ultimately infeasible as the collection size grows. Firstly, it's hard to know future use cases for finding an item, but ensuring a useful new tag is applied to old items may require evaluating the entire collection. Like using too many colours of sticky notes to tag pages of a textbook, having too many tags dilutes the meaning of each.
-
-Tagging also breaks down in some physical.
+I see tagging as a flexible organization strategy, but ultimately too tedious as the collection size grows. Firstly, it's hard to know future use cases for finding an item, but ensuring a useful new tag is applied to old items may require evaluating the entire collection. Like using too many colours of sticky notes to tag pages of a textbook, having too many tags dilutes the meaning of each.
 
 ## Contextual hierarchies
 Personally I find it easier to organize in a heirarchy, **grouping by context**, and creating sub-hierarchies lazily as needed. In this sense, _context_ means use case for finding and using the item.
 
-Hierarchichal filesystems are a persistent analogy because containers make intuitive sense. Things that are used together can be kept in a container.
+Physically, this organization already exists around us: rooms, boxes, shelves, and bags. Items used together tend to be stored together.
+
+Digitally, hierarchies are more prevalent and portable than tags Hierarchichal filesystems are persistent because containers make intuitive sense. Things that are used together can be kept in a container.
 
 ## The type trap
 todo
@@ -41,3 +41,7 @@ todo:
 ### Backpack
 
 ### Books
+
+### URL schemes
+
+## The future: AI tags
