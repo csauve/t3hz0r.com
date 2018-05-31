@@ -19,7 +19,7 @@ Neither a messy storage garage nor a single folder of thousands of images are ef
 ## Contextual hierarchies
 Because organizing is for the benefit of a particular task or _context_, I think **grouping by context** is very effective.
 
-Personally I find it easier to organize in a heirarchy, **grouping by context**, and creating sub-hierarchies lazily as needed. In this sense, _context_ means use case for finding and using the item.
+Personally I find it easier to organize in a heirarchy, **grouping by context**, and creating sub-hierarchies lazily as needed. In this sense, context means use case for finding and using the item.
 
 Physically, this organization already exists around us: rooms, boxes, shelves, and bags. Items used together tend to be stored together.
 
@@ -34,7 +34,7 @@ todo:
 ### A Java project source tree
 It really doesn't matter to the compiler what your source tree looks like, so long as the imports are correct. But code's meant for humans to understand, and that goes for the source tree layout too. Maintenance of a codebase is easiest when the code we need to read and the changes we need to make are as localized as possible.
 
-Consider the following strawman source tree:
+Consider the following straw man source tree:
 
 ```
 src/
@@ -52,7 +52,7 @@ src/
     EntityBase.java
 ```
 
-This tree groups code by _type_ of operations, but this isn't usually how we approach a project to make a change. Supposing I had the task of "require users to have unique names", I would need to explore 3 different packages to find all the `User*` code. In a less contrived example, this would be hampered by any poor class naming choices which make it harder to identify user-related code and shared code.
+This tree groups code by _type_ of operations, but this isn't usually how we approach a project to make a change. Supposing I had the task of "require users to have unique names", I would need to explore 3 different packages to find all the `User*` code. In a less contrived example, this would be hampered by a larger codebase and any poor class name choices making it harder to identify user-related code.
 
 Instead, let's organize the tree like so:
 
@@ -72,7 +72,7 @@ src/
     EntityBase.java
 ```
 
-By grouping classes by _context_, my user-related task is now likely localized to a single package. Any code is shared by many concerns is put in a `common` package to identify it as such, which also highlights good candidates for extraction from the project if other projects could take advantage of it.
+By grouping classes by _context_, my user-related task is now likely localized to a single package. Any code is shared by many concerns is put in a `common` package to identify it as such, which also highlights good candidates for extraction from the project. This layout is more resilient to unconventional class naming and discourages coupling between separate concerns.
 
 ### Kitchen
 

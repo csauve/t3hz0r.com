@@ -13,6 +13,7 @@ Here are some interesting blogs and other content I've found around the web...
 * http://jamie-wong.com/
 * https://wunkolo.tumblr.com
 * http://www.skynettoday.com/
+* https://www.quantamagazine.org/
 
 ## Art & comics
 * https://www.xkcd.com
