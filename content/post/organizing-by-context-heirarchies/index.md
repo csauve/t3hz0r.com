@@ -16,20 +16,19 @@ Neither a messy storage garage nor a single folder of thousands of images are ef
 2. The model changes over time
 3. The means of organization do not match our model
 
-## Contextual hierarchies
-Because organizing is for the benefit of a particular task or _context_, I think **grouping by context** is very effective.
+## Context hierarchies
+Because organizing is for the benefit of particular tasks or _contexts_, I find that **grouping by context** is effective.
 
-Personally I find it easier to organize in a heirarchy, **grouping by context**, and creating sub-hierarchies lazily as needed. In this sense, context means use case for finding and using the item.
+This can be done recursively, with groupings created as necessary. This type of organization is common digitally (filesystems) and has good physical analogues in the way we use containers and rooms. Items or groups used together tend to be stored together, and this forms a "tree".
 
-Physically, this organization already exists around us: rooms, boxes, shelves, and bags. Items used together tend to be stored together.
+The goal is to minimize the time/number of steps needed to find an item in the collection. This can be done by splitting up groups when they get too big and avoiding unnecessarily deep nestings. For the computer scientists, the average case should only require `O(log n)` decisions to find an item. In other words, doubling the number of things you keep doesn't double the time taken to find something.
 
-Digitally, hierarchies are more prevalent and portable than tags Hierarchichal filesystems are persistent because containers make intuitive sense. Things that are used together can be kept in a container.
+When an item could be used in multiple contexts, or is otherwise hard to place, I suggest placing it at the most specific level of the tree which is still general enough to. It's like how every house has one of those "stuff" drawers.
 
 ## The type trap
-todo
 
-## Examples
-todo:
+
+## Case studies
 
 ### A Java project source tree
 It really doesn't matter to the compiler what your source tree looks like, so long as the imports are correct. But code's meant for humans to understand, and that goes for the source tree layout too. Maintenance of a codebase is easiest when the code we need to read and the changes we need to make are as localized as possible.
@@ -76,7 +75,10 @@ By grouping classes by _context_, my user-related task is now likely localized t
 
 ### Kitchen
 
+
 ### Documents
+
+ For example, with a directory tree, there will be some number of subdirectories which is easy to scan and make a decision on which to descend into, but also large enough that the parent directory doesn't seem pointless. Consistency with sibling directories is
 
 ### Travel photos
 
