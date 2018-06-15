@@ -12,7 +12,7 @@ Hi, I'm [Connor Sauve](/about), and welcome to my blog! This is where I share my
 
 <nav>
 
-* <time>2018-06-14:</time> [Organizing files by context hierarchies][/post/organizing-by-context-heirarchies]
+* <time>2018-06-14:</time> [Organizing files by context hierarchies](/post/organizing-by-context-heirarchies)
 * <time>2018-05-09:</time> [Can Google be trusted with our digital wellbeing?](/post/google-digital-wellbeing)
 * <time>2018-04-13:</time> [I thought I knew the web](/post/i-thought-i-knew-the-web)
 * <time>2018-04-03:</time> [Visualizing closed curve inscribed lines](/post/visualizing-closed-curve-inscribed-lines)
