@@ -1,5 +1,8 @@
+---
+date: 2013-10-20
+---
+
 # Target visibility detection for GuiltySpark: Part 2
-<time>2013-10-20</time>
 
 In [part 1 of this post](/post/guiltyspark-visibility-detection-part-1), I talked about reverse engineering and memory scanning, the problems with GuiltySpark's existing target visibility detection, and how those problems might be solved by performing ray casting in the map's binary space partitioning tree (BSP). This post will cover some of my notes from March 13th 2011, when I had just finished implementing it.
 

@@ -1,5 +1,8 @@
+---
+date: 2017-09-19
+---
+
 # Functional JS with Ramda
-<time>2017-09-19</time>
 
 Recently I've been writing a lot more JS in a functional style, spurred on by React best practices stateless components and immutable data structures as props. The library [Ramda](http://ramdajs.com/) has been especially helpful as a toolkit, offering [over 240](http://ramdajs.com/docs/) small pre-built and well tested functional building blocks.
 

@@ -1,5 +1,8 @@
+---
+date: 2018-04-01
+---
+
 # Diamond and circular dependencies
-<time>2018-04-01</time>
 
 I draw a lot of dependency diagrams at work. It's a good way to tease apart concerns and question the architecture of an application. There are a couple common patterns I've come across in a service oriented architecture which can seem like dead ends, but with a perspective shift they can become tractable for refactoring.
 

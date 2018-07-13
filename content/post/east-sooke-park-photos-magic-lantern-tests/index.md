@@ -1,5 +1,8 @@
+---
+date: 2014-01-16
+---
+
 # East Sooke Park photos and _Magic Lantern_ tests
-<time>2014-01-16</time>
 
 Last Saturday I took a day trip down to East Sooke Park with ['Bert](http://www.flickr.com/photos/28228492@N05/) for some hiking and photography. It was pouring out, but we were determined to head out anyway. A few wrong turns and backtracks later and we were in the Aylard farm parking lot, where search and rescue volunteers were still set up looking for [Robin Penwarn](http://www.timescolonist.com/police-call-off-search-for-missing-woman-in-east-sooke-park-1.779786). From talking to them I got the impression they didn't expect to find anything, unfortunately.
 

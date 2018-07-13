@@ -1,5 +1,8 @@
+---
+date: 2014-02-14
+---
+
 # Hacking FlapMMO for mouse control
-<time>2014-02-14</time>
 
 In the wake of mobile game Flappy Bird's popularity came an even funner browser variant called [FlapMMO](http://flapmmo.com/) ([@FlapMMO](https://twitter.com/FlapMMO)). The great thing about FlapMMO is being able to see the attempts of thousands of other players. Even though there's no interaction between the birds, it's still a hilarious competition.
 

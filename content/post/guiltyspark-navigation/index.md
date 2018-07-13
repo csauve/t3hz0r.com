@@ -1,5 +1,8 @@
+---
+date: 2013-10-20
+---
+
 # The GuiltySpark navigation system
-<time>2013-10-20</time>
 
 Back in 2010, as a first-year UVic student, I started building [a program that plays Halo](/post/guiltyspark). I wanted to go a step further than the [aimbots](http://www.urbandictionary.com/define.php?term=Aimbot) that already existed for the game, and build something that took over *all* of the player's responsibilities. It needed to be intelligent, and it needed to be mobile.
 

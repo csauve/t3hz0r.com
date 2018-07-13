@@ -1,5 +1,8 @@
+---
+date: 2013-10-19
+---
+
 # Intro to GuiltySpark: Autonomous Halo bot
-<time>2013-10-19</time>
 
 I'm an avid player of the PC game *Halo*, and I spent over 6 years involved in its modding community. One of my ventures during that time was to create a program that played the game on its own. And I wanted to accomplish this goal without modifying the game at all.
 

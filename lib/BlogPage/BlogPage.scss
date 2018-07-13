@@ -16,6 +16,8 @@
   width: 3em;
   border-bottom: none;
   font-family: $font-family-code;
+  text-decoration: none;
+  color: $fg-content;
 
   #z0r {
     animation-delay: 0.4s;
@@ -29,17 +31,15 @@
   }
 }
 
-.blog-page {
-  time {
-    color: $fg-minor;
-  }
+.blog-article {
+  padding: $padding-std;
+  padding-top: 0;
+  max-width: $max-reading-content-width;
+  margin: 0 auto;
+}
 
-  &.type-post {
-    padding: $padding-std;
-    padding-top: 0;
-    max-width: $max-reading-content-width;
-    margin: 0 auto;
-  }
+.article-header {
+  color: $fg-minor;
 }
 
 .landing-background {
@@ -53,13 +53,6 @@
   canvas {
     margin: 0;
   }
-}
-
-//link protocol styling:
-a[href^="mailto:"]:after {
-  content: "📧";
-  vertical-align: super;
-  font-size: 50%;
 }
 
 @media (max-width: $small-screen-width) {

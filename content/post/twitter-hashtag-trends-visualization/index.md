@@ -1,5 +1,8 @@
+---
+date: 2013-10-23
+---
+
 # Twitter hashtag trends visualization
-<time>2013-10-23</time>
 
 For my 480c term project I knew I wanted to do some sort of data visualization. At the time, I was inspired by Christopher Domas' binary visualization tool [..cantor.dust..](http://www.youtube.com/watch?v=4bM3Gut1hIk) and how it could show patterns in otherwise random looking data. I began to wonder if the same technique could be somehow applied to visualize Twitter trends but decided Twitter's data just isn't applicable in the same way.
 

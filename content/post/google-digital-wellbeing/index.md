@@ -1,5 +1,8 @@
+---
+date: 2018-05-09
+---
+
 # Can Google be trusted with our digital wellbeing?
-<time>2018-05-09</time>
 
 Among Google's recent product announcements was [Digital Wellbeing][1], a suite of tools and personal assistant features to help manage your time online, enact parental controls, and spend less time viewing screens. My first reaction was that this seemed counterintuitive to Google's business, which thrives on and competes for user "engagement" and mindshare.
 

@@ -1,5 +1,8 @@
+---
+date: 2018-04-02
+---
+
 # Facets of software
-<time>2018-04-02</time>
 
 Something that really sets enterprise software apart from a personal project is the sheer number of competing concerns that need to be addressed during its development. It's really easy to take a user story, jump into business logic changes, move on to testing, and deploy it. That's agile, right?
 

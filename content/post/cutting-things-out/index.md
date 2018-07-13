@@ -1,5 +1,8 @@
+---
+date: 2013-10-29
+---
+
 # How to cut things out properly in Photoshop
-<time>2013-10-29</time>
 
 One of the most common tasks in Photoshop is extracting an object from an image into its own layer so you can superimpose the object over a different background. Lots of people use the magic wand tool to do this, and can't figure out why why their cutouts have these ugly white edges afterwards. Need an example?
 

@@ -1,5 +1,8 @@
+---
+date: 2013-10-20
+---
+
 # The GuiltySpark script engine
-<time>2013-10-20</time>
 
 If you're unfamiliar with my old project GuiltySpark, check out this [introductory post](/post/guiltyspark). In short, it was an attempt to create a program that played Halo by itself. This post will detail the solution I came up with back in 2010 to drive the behaviour of the bot.
 

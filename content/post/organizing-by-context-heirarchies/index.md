@@ -1,5 +1,8 @@
+---
+date: 2018-06-14
+---
+
 # Organizing files by context hierarchies
-<time>2018-06-14</time>
 
 If you're like me, you think there's usually a "right" way to organize a bunch of files and you'll spend time to find it. Over time I have found that a simple rule of thumb, which I call **"group by context"**, works best for me.
 

@@ -1,5 +1,8 @@
+---
+date: 2015-03-21
+---
+
 # Distance function ray marching in WebGL
-<time>2015-03-21</time>
 
 Using distance functions and ray marching to render scenes is nothing new, but I wanted to try it myself. Most of the demos at [shadertoy.com](http://shadertoy.com) use this technique, and I've always been impressed by how such [beautifully rendered scenes](https://www.shadertoy.com/view/MdX3Rr) can be made using at most a few hundred lines of GLSL.
 

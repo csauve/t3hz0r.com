@@ -1,5 +1,8 @@
+---
+date: 2018-04-13
+---
+
 # I thought I knew the web
-<time>2018-04-13</time>
 
 Like many others recently, I am questioning my use of social media. The whole scandal around Cambridge Analytica and Facebook is systemic and hardly surprising, but what _is_ surprising me now is the amount of data I've signed over to Facebook in my youth while at the same time balking at the idea of using 3rd party Facebook apps. It goes to show how much trust I had in the platform.
 

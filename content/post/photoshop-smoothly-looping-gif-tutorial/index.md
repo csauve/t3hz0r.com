@@ -1,5 +1,8 @@
+---
+date: 2014-02-20
+---
+
 # A Photoshop method for smoothly looping a GIF
-<time>2014-02-20</time>
 
 I recently came across [a question in r/photoshop](http://www.reddit.com/r/photoshop/comments/1yboew/how_do_i_loop_this_slightly_complex_gif_in/) about how to make this Mass Effect GIF loop smoothly (~10s long):
 

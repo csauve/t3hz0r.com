@@ -1,5 +1,8 @@
+---
+date: 2014-04-11
+---
+
 # Time-lapse and WebM test
-<time>2014-04-11</time>
 
 You'll need a browser with at least native WebM support to view this video, like Firefox, Chrome, or Opera. [Read more on WebM support here](http://en.wikipedia.org/wiki/WebM#Software).
 

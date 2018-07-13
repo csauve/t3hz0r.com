@@ -1,5 +1,8 @@
+---
+date: 2013-10-20
+---
+
 # Target visibility detection for GuiltySpark: Part 1
-<time>2013-10-20</time>
 
 So we have a bot that can [navigate around the map](/post/guiltyspark-navigation) and [make its own decisions](/post/guiltyspark-scripting), but it's pretty dumb if it can't tell whether or not the target it's aiming at is visible or not. In other words, it needs to know if the line between itself and an opponent player is occluded by level geometry.
 

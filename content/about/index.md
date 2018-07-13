@@ -1,4 +1,5 @@
 # About
+
 I'm Connor Sauve, a software engineer hailing from beautiful Victoria, Canada. I have an interest in projects both technical and creative, plus a love of the outdoors and travel.
 
 During my studies at the _University of Victoria_ I had the pleasure of working co-ops at [AbeBooks.com](https://www.abebooks.com/), [Chris Upton's bioinformatics lab](https://web.uvic.ca/~cupton/), and [Helm Operations](https://www.helmoperations.com/). I graduated in 2014 with my BCompSc and returned to *AbeBooks.com*, where I currently develop marketplace payments systems.

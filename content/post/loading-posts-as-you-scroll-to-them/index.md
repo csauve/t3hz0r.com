@@ -1,5 +1,8 @@
+---
+date: 2014-02-19
+---
+
 # Scroll-triggered content loading in Angular
-<time>2014-02-19</time>
 
 Because the front page of my (former) blog displays full post content, and my posts tend to be content-heavy (images, video, gifs), page load times can be long. Visitors might not even scroll down to read all 10 posts per page, but they still incur the cost of loading them. It took me 4.31 seconds to finish loading my homepage, and it was noticeably slow to respond to scrolling during this time. It's especially bad for first-time visitors who don't have anything cached.
 

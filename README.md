@@ -17,11 +17,8 @@ aws s3 sync --delete ./dist s3://t3hz0r.com/
 ```
 
 ## Todo
+* RSS support
 * Hash assets for cache-busting
-* RSS
-* Post footers
-* QR code to open page on mobile
-* Script to find dead links
 
 ## License
 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)

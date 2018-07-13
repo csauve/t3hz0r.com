@@ -1,5 +1,8 @@
+---
+date: 2018-04-03
+---
+
 # Visualizing closed curve inscribed lines
-<time>2018-04-03</time>
 
 I was watching a [3Blue1Brown video](https://www.youtube.com/watch?v=AmgkSdhK4K8) about the "inscribed rectangle problem" and was curious how representing inscribed lines might help reason about finding inscribed squares for a jordan curve.
 

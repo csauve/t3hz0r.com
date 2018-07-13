@@ -1,5 +1,8 @@
+---
+date: 2013-12-24
+---
+
 # How to make a colour afterimage optical illusion
-<time>2013-12-24</time>
 
 You've probably seen GIFs like this before. Just stare at the dot as the number counts down and the final image will look coloured despite actually being black and white.
 
