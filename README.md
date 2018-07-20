@@ -17,7 +17,6 @@ aws s3 sync --delete ./dist s3://t3hz0r.com/
 ```
 
 ## Todo
-* RSS support
 * Hash assets for cache-busting
 
 ## License

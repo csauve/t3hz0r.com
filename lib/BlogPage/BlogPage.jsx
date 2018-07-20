@@ -2,7 +2,7 @@ import React from "react";
 import {StandardPage} from "t3h-ui/lib/components.js";
 import {navContent, headerTitle} from "../common/commonElements.jsx";
 
-const BlogPage = ({bodyTitle, bodyHtml, meta, path}) => {
+const BlogPage = ({title, bodyHtml, meta, path}) => {
   const doc = {
     ...meta,
     scripts: [
@@ -15,7 +15,8 @@ const BlogPage = ({bodyTitle, bodyHtml, meta, path}) => {
       "/katex/dist/katex.min.css",
       ...meta.styles
     ],
-    title: `${meta.title || bodyTitle || "Blog"} - t3hz0r`,
+    feedUrl: "/rss.xml",
+    title: `${title} - t3hz0r`,
   };
 
   return (
