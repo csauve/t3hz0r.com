@@ -6,7 +6,7 @@
 
 #home-link {
   padding-left: 2em;
-  background-image: url("/t3h-assets/favicon.png");
+  background-image: url("/t3h-assets/common/favicon.png");
   background-repeat: no-repeat;
   background-size: contain;
   height: 100%;
@@ -50,7 +50,7 @@
   left: 0;
   z-index: -1;
 
-  canvas {
+  .fragment-shader {
     margin: 0;
   }
 }

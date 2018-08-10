@@ -4,10 +4,10 @@ import concat from "gulp-concat";
 import RSS from "rss";
 import {sortBy, reverse, compose} from "ramda";
 import rename from "gulp-rename";
-import {buildStyles, buildScripts, buildClean, buildCopy} from "t3h-ui/lib/gulp-jobs.js";
-import {renderDocStatic} from "t3h-ui/lib/server.js";
-import BlogPage from "./lib/BlogPage/BlogPage.jsx";
-import HomePage from "./lib/HomePage/HomePage.jsx";
+import {buildStyles, buildScripts, buildClean, buildCopy} from "t3h-ui/lib/utils/gulp-helpers.js";
+import {renderDocStatic} from "t3h-ui/lib/utils/ssr.js";
+import PostPage from "./lib/components/PostPage.jsx";
+import HomePage from "./lib/components/HomePage.jsx";
 import {parseBlogPage} from "./lib/common/pageParser.js";
 import crypto from "crypto";
 
@@ -15,11 +15,11 @@ const paths = {
   //stylesheets which are sass-processed and minified
   styles: [
     "./content/**/*.+[scss|css]",
-    "./lib/blog-styles.scss",
+    "./lib/blog-bundle.scss",
   ],
   //scripts which are transpiled, bundled, and minified
   scripts: [
-    "./lib/blog-scripts.js",
+    "./lib/blog-bundle.js",
     "./content/**/*.+(jsx|js)",
   ],
   //markdown which are rendered to HTML pages
@@ -35,7 +35,7 @@ const paths = {
   //assets which are just copied without modification
   copy: [
     "./content/**/*.!(jsx|js|css|scss|md)",
-    "./node_modules/t3h-ui/lib/+(t3h-assets)/**/*",
+    "./node_modules/t3h-ui/+(t3h-assets)/**/*",
     "./node_modules/highlight.js/styles/atom-one-light.css",
     "./node_modules/+(katex)/dist/katex.min.css",
     "./node_modules/+(katex)/dist/fonts/*",
@@ -79,7 +79,7 @@ const pages = () =>
   .pipe(rename({extname: ".html"}))
   .pipe(transform("utf-8", (content, file) => {
     const page = parseBlogPage(content, file.relative);
-    return renderDocStatic(BlogPage, page);
+    return renderDocStatic(PostPage, page);
   }))
   .pipe(gulp.dest(paths.dist));
 
