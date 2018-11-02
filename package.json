@@ -41,6 +41,6 @@
     "react": "^16.2.0",
     "react-dom": "^16.3.2",
     "rss": "^1.2.2",
-    "t3h-ui": "https://s3.amazonaws.com/csauve-npm-packages/t3h-ui-0.0.5.tgz"
+    "t3h-ui": "https://s3.amazonaws.com/csauve-npm-packages/t3h-ui-0.0.6.tgz"
   }
 }

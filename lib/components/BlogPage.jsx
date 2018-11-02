@@ -18,7 +18,7 @@ const headerTitle = (
   </a>
 );
 
-const BlogPage = ({title, children, meta, path}) => {
+const BlogPage = ({title, children, mainHeader, meta, path}) => {
   const doc = {
     ...meta,
     scripts: [
@@ -38,7 +38,7 @@ const BlogPage = ({title, children, meta, path}) => {
   };
 
   return (
-    <StandardPage doc={doc} headerTitle={headerTitle} navContent={navContent}>
+    <StandardPage doc={doc} headerTitle={headerTitle} navContent={navContent} mainHeader={mainHeader}>
       {children}
     </StandardPage>
   );
