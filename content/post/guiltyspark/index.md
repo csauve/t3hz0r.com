@@ -30,3 +30,10 @@ The bot is about as "skilled" as the average Halo PC player. Read more about [th
 Navigation is done by path finding on a pre-built navigation graph, then simulating combinations of the W, A, S, and D keys to move the player along the path independently of what direction it's facing. I have a post discussing the [navigation system](/post/guiltyspark-navigation) specifically.
 
 A big problem I had during implementation was how to determine if the target player is visible or not. Read about my [work to improve visibility detection](/post/guiltyspark-visibility-detection-part-1) using ray casting and level geometry extraction.
+
+---
+
+_Update: 2018-11-29_
+
+## Source code
+Application sources, binaries, and documentation are now available on [GitHub](https://github.com/csauve/guiltyspark).
