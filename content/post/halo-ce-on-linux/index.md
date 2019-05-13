@@ -1,3 +1,7 @@
+---
+date: 2019-05-13
+---
+
 # How to run Halo Custom Edition on Linux with community mods
 
 I've recently gotten [Halo Custom Edition][hce] working well on my Linux desktop, so I want to document and share the process. Custom Edition is a standalone version of Halo PC (a.k.a. "retail") which supports user-created maps and an editing kit (HEK).
@@ -32,7 +36,6 @@ Now configure a Wine prefix. This is a directory where the Windows system and it
 
 ```sh
 export WINEPREFIX=/home/<you>/wine-prefixes/halo
-export 
 wineboot
 ```
 
