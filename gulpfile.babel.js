@@ -26,10 +26,6 @@ const paths = {
   pages: [
     "./content/**/*.md"
   ],
-  //posts which should be indexed
-  indexed: [
-    "./content/+(post)/**/index.md"
-  ],
   indexName: "index.html",
   rssName: "rss.xml",
   //assets which are just copied without modification
@@ -74,6 +70,22 @@ const buildRss = (posts) => {
   return feed.xml({indent: true});
 };
 
+let allPosts = [];
+
+const pages = () => {
+  const allPagesJson = gulp.src(paths.pages)
+    .pipe(rename({extname: ".html"}))
+    .pipe(transform("utf-8", (content, file) => {
+      const page = parseBlogPage(content, file.relative);
+      return JSON.stringify(page);
+    }))
+    .pipe(concat("index.json", {newLine: ","}))
+    .pipe(transform("utf-8", (content, file) => {
+      return `[${content}]`;
+    }));
+};
+
+//todo: replace
 const pages = () =>
   gulp.src(paths.pages)
   .pipe(rename({extname: ".html"}))
@@ -83,6 +95,7 @@ const pages = () =>
   }))
   .pipe(gulp.dest(paths.dist));
 
+//todo: replace
 const rss = () =>
   gulp.src(paths.indexed)
   .pipe(rename({extname: ".html"}))
@@ -105,6 +118,7 @@ const rss = () =>
   }))
   .pipe(gulp.dest(paths.dist));
 
+//todo: replace
 const index = () =>
   gulp.src(paths.indexed)
   .pipe(rename({extname: ".html"}))
