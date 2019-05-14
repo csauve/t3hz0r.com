@@ -63,6 +63,7 @@ During the CE installer, you will be asked for your retail product key. You do n
 
 ```sh
 #!/bin/bash
+export WINEDEBUG=-all
 export WINEPREFIX=/home/<you>/wine-prefixes/halo
 HALO_HOME="$WINEPREFIX/drive_c/Program Files (x86)/Microsoft Games/Halo Custom Edition"
 HALO_OPTS="-console -screenshot -windowed"
@@ -70,7 +71,7 @@ cd "$HALO_HOME"
 nohup wine haloce.exe $HALO_OPTS &
 ```
 
-You should also set the `$HALO_HOME` variable in your shell because you'll need it later during this guide.
+The `WINEDEBUG=-all` variable noticeably improved performance for me during multiplayer matches with a lot of players. You should also set the `$HALO_HOME` variable in your shell because you'll need it later during this guide.
 
 Hopefully the game runs, and you're greeted with the menu music if the audio is working correctly. Head to the video settings and bump the resolution up to your native resolution if available and set framerate to "NO VSYNC". Don't worry about vertical tearing or if your native resolution was not an option; we'll use a mod later to address this. It is not recommended to use Halo's `-vidmode <width>,<height>,<refresh>` argument or built-in Vsync as it introduces input latency.
 
