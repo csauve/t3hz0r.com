@@ -172,9 +172,9 @@ The [Halo CE Refined project][refined] by Moses, Jesse, and Vaporeon is a rebuil
 
 Once these archives have been downloaded, extract all `.map` files to `$HALO_HOME/maps`. Overwrite or backup the existing multiplayer and UI maps. The refined multiplayer maps above have forged checksums which allows them to be used in multiplayer. The UI map restores the Halo ring shader and adds a singleplayer menu to Custom Edition so you can load the refined SP maps without having to use the console.
 
-![Refined Bloog Gulch screenshot](refined-mp.jpg)
+![Refined Blood Gulch screenshot](refined-mp.jpg)
 
-_Refined Bloog Gulch, showing the fixed teleporter shader and high resolution HUD (split screen version)_
+_Refined Blood Gulch, showing the fixed teleporter shader and high resolution HUD (split screen version)_
 
 ![Refined AotCR mission](refined-sp.jpg)
 
