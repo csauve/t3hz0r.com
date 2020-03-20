@@ -4,13 +4,15 @@ date: 2019-05-13
 
 # How to run Halo Custom Edition on Linux with community mods
 
+**Updated 2020-03-19**
+
 I've recently gotten [Halo Custom Edition][hce] working well on my Linux desktop, so I want to document and share the process. Custom Edition is a standalone version of Halo PC (a.k.a. "retail") which supports user-created maps and an editing kit (HEK).
 
-Setting up the HEK will not be a goal and instead I want to focus on setting up a good multiplayer experience. This will involve installing CE, updating it, and installing a few popular community mods:
+Setting up the HEK will not be a goal and instead I want to focus on setting up a good multiplayer experience. This will involve installing CE, updating it, and installing a few popular mods and improvements:
 
-* HAC2: automatic custom map downloads, UI tweaks, server bookmarking
-* Chimera: FOV and widescreen fixes plus other quality of life improvements
+* Chimera 1.0: Custom map downloads, FOV and widescreen fixes, server bookmarks, plus other quality of life improvements
 * CE Refined: multiplayer and campaign maps rebuilt with a tagset which restores the correct Xbox appearance lost during the game's PC port
+* DXVK: Implements DirectX 9 over Vulkan for increased framerates
 
 Make sure you have your Halo PC product key ready. You'll need it to install CE later. I'll be referencing some Arch linux specifics, but distro shouldn't really matter so just substitute the equivalents from yours.
 
@@ -22,7 +24,7 @@ First off, it's a good idea to start with an up-to-date system and take advantag
 sudo pacman -S nvidia nvidia-utils nvidia-settings
 ```
 
-I found that the [nouveau][] drivers and mesa gave poor framerates compared to the nvidia driver. I also tried using wlroots-based Wayland window managers (like [sway][] and [way-cooler][]) instead of Xorg and experienced lower framerates and frequent crashes requiring restart, so I can't recommend that approach either.
+I found that the [nouveau][] drivers and mesa gave poor framerates compared to the nvidia driver. I also tried using wlroots-based Wayland window managers (like [sway][] and [way-cooler][]) instead of Xorg and experienced lower framerates and frequent crashes requiring restart, so I can't recommend that approach either unless it's otherwise already stable and performant on your system.
 
 ## Creating a Wine prefix
 
@@ -32,7 +34,7 @@ Next, install [Wine][wine] and Winetricks. To get ingame sound working, I needed
 sudo pacman -S wine winetricks openal libpulse alsa-plugins mpg123 alsa-lib
 ```
 
-Now configure a Wine prefix. This is a directory where the Windows system and its "C drive" will be installed. A default wine prefix will be used if you don't specify one, but if you want to isolate applications running under Wine it can be helpful to set a prefix by environment variable. 
+Now configure a Wine prefix. This is a directory where the Windows system and its "C drive" will be installed. A default wine prefix will be used if you don't specify one, but if you want to isolate applications running under Wine it can be helpful to set a prefix by environment variable.
 
 ```sh
 export WINEPREFIX=/home/<you>/wine-prefixes/halo
@@ -66,7 +68,7 @@ During the CE installer, you will be asked for your retail product key. You do n
 export WINEDEBUG=-all
 export WINEPREFIX=/home/<you>/wine-prefixes/halo
 HALO_HOME="$WINEPREFIX/drive_c/Program Files (x86)/Microsoft Games/Halo Custom Edition"
-HALO_OPTS="-console -screenshot -windowed"
+HALO_OPTS="-console -screenshot"
 cd "$HALO_HOME"
 nohup wine haloce.exe $HALO_OPTS &
 ```
@@ -93,86 +95,72 @@ The field of view will be too narrow if you are using a widescreen display. No w
 
 ![Testing visuals on Beaver Creek](testing.jpg)
 
-## Installing Halo Anticheat (HAC2)
-
-HAC2 is a client mod which adds some long-needed features to CE:
-
-* Automatic custom map downloads when joining servers
-* FOV control
-* Server bookmarking
-* Better chat styling
-
-Despite the name, it doesn't actually include any anti-cheat as this has fallen to server-side mods to implement. To install HAC2, download the release from the [official site][hac2] ([mirror][hac2-mirror]) and place it in Halo's `controls` directory:
-
-```sh
-wget http://client.haloanticheat.com/release.zip
-unzip release.zip
-mv release/loader.dll $HALO_HOME/controls
-```
-
-HAC2 can be configured at runtime, but to make things persistent you can create a config file in `~/My Games/Halo CE/hac/preferences.ini`:
-
-```ini
-fov=90
-hud_ratio_fix=0
-play_during_queue=1
-```
-
-These and other options are documented on the [HAC2 site][hac2]. We specifically disable HAC2's widescreen HUD fix because we will install another mod which implements it better.
-
-Give the game a run again using the script from earlier. You should find that the FOV is better suited to widescreen. You can change the FOV ingame by opening the console with `~` and entering `fov <value>`. The function keys from F4 up now control HAC2 features like server bookmarking, HUD colouring. You should also now be able to choose your native resolution in the video settings if it was previously unavailable.
-
-HAC2 is incompatible with [OpenSauce][os] as used for [SPV3][spv3]. While OpenSauce also implements FOV control, map downloads, post-processing effects, [and more][os-trailer], its mostly used for custom campaigns and the map downloading is unreliable. If you'd like to use both, I suggest a second Wine prefix so you don't have to keep switching DLLs out.
-
 ## Installing Chimera
 
-Chimera is another mod which further enhances the Halo client. It is compatible with HAC2 or OpenSauce. If you are not planning on using a controller, download build 581 from the [enhancement guide][pc-guide] or [click here][chimera-581]. Otherwise use build 49 from the [development thread][chimera]. Either way, install chimera into the `controls` directory like HAC2:
+**Prior to 2020-03-19 This guide previously recommended installing the HAC2 mod for its automatic custom map download feature. Chimera 1.0 now implements this feature, so for a simpler setup I suggest just sticking with Chimera only.**
+
+Chimera is a mod which further enhances the Halo client. It is not compatible with HAC2 or OpenSauce. It can be downloaded from the [official development thread][chimera] and replaces the `strings.dll` file in your Halo CE install directory:
 
 ```sh
-curl "https://opencarnage.net/applications/core/interface/file/attachment.php?id=922" --output chimera-581.zip
-unzip chimera-581.zip
-mv chimera.dll $HALO_HOME/controls
+# download and extract Chimera
+curl "https://opencarnage.net/applications/core/interface/file/attachment.php?id=1050" --output chimera.7z
+7z x chimera.7z
+# back up your existing strings DLL
+mv "$HALO_HOME/strings.dll" "$HALO_HOME/strings.dll.bak"
+# install the Chimera strings DLL
+mv strings.dll "$HALO_HOME"
+# install chimera's default config
+mv chimera.ini "$HALO_HOME"
 ```
 
-If we just left it here, Chimera's features will work but framerate is negatively impacted. I also ran into crashing issues with build 49. Both of these are resolved by installing DirectX 9 in the Wine prefix rather than using Wine's built in DirectX support:
+Chimera now needs to be configured. In short you need to:
+
+1. Edit the `chimera.ini` file installed above. This lets you configure Halo's resolution, set up hotkeys, and adjust chat message locations
+2. Issue commands through the ingame console to further configure Chimera. These are saved to `~/My\ Games/Halo\ CE/chimera/preferences.txt` if you haven't otherwise configured your wine prefix
+
+The ingame commands are well documented in Chimera's `README.md`. To change a preference, type the command into the ingame console by pressing the tilde (~) key. Changes should be immediately saved and applied ingame. Some preferences I recommend are:
+
+```
+chimera_block_buffering 1
+chimera_block_camera_shake 1
+chimera_block_gametype_indicator 1
+chimera_block_gametype_rules 1
+chimera_block_hold_f1 1
+chimera_block_loading_screen 1
+chimera_block_zoom_blur 1
+chimera_block_mouse_acceleration 1
+chimera_fov 90
+chimera_auto_center 2
+chimera_devmode true
+chimera_enable_console 1
+chimera_widescreen_fix 1
+chimera_af 1
+chimera_interpolate 1
+chimera_uncap_cinematic true
+```
+
+## DXVK
+At this point, you may not be satisfied with framerates. Using winetricks to install native d3d9 can improve framerates a bit, but I highly recommend using [DXVK](https://github.com/doitsujin/dxvk/) to get the best performance. It installs "native" direct X DLLs to your wine prefix which are backed by Vulkan and your graphics drivers rather than wine's built-in D3D-over-OpenGL implementation. DXVK has been specifically tested and patched for Halo CE among other games, so the experience is great.
+
+You will firstly need to update and install your graphics driver and Vulkan ICD loader (32 bit included, even if you're using a 64 bit wine prefix):
 
 ```sh
-winetricks d3dx9
+sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader
 ```
 
-Give the game another launch and the framerate should be back in the hundreds. Next, we'll configure Chimera using by editing `~/My Games/Halo CE/chimera/chimerasave.txt`:
+Next, grab the latest [DXVK release](https://github.com/doitsujin/dxvk/releases), extract its tarball, and run:
 
-```
-chimera_skip_loading "1"
-chimera_widescreen_fix "1"
-chimera_interpolate "ultra"
-chimera_auto_center "2"
-chimera_block_mouse_acceleration "1"
-chimera_disable_buffering "0"
-chimera_fov_fix "1"
-chimera_uncap_cinematic "1"
-chimera_sniper_hud_fix "1"
-chimera_af "1"
-chimera_throttle_fps "120"
-chimera_block_firing_particles "0"
-chimera_block_vsync "1"
-chimera_modded_stock_maps "1"
-
-chimera_block_gametype_indicator "1"
-chimera_safe_zones "1"
-chimera_hud_kill_feed "1"
-chimera_mouse_sensitivity "6" "6"
-chimera_split_screen_hud "1"
+```sh
+# set the wine prefix if it's not already set
+export WINEPREFIX=<your halo wine prefix>
+./setup_dxvk.sh install
 ```
 
-The number of options is quite extensive, with some being more preferential (second group above). Chimera even supports lua scripting, so see the [complete documentation][chimera-docs] for more info.
+This copies the DXVK d3d DLLs to your prefix's `system32` and `syswow64` directories. Next, use `winecfg` to ensure these DLLs are actually being used:
 
-* I saw it recommended online to use `chimera_disable_buffering 1` as this improves input latency, but this drove my framerate below 60 again and I reverted to using buffering
-* `chimera_af` enables anisotropic filtering. This did not have any noticeable effect on framerate
-* `chimera_interpolate` smooths out the 30 FPS character and weapon animations
-* `chimera_throttle_fps` can be used to set a vsync without using Halo's option
+![Wine config showing the d3d9 library in native mode](winecfg.png)
 
-The author Kavawuvi is actively developing this mod towards a 1.0 release ([work tracker][chimera-tracker]). An alpha 1.0 release is available in the latest page of the [development thread][chimera] but still lacks automatic map downloads, so we still need HAC2 for now. Definitely keep an eye on this.
+Ensure that d3d9 is in **native** mode, not built-in. If you have also installed the HEK in this wine prefix, note that **Sapien does not yet work under DXVK** and you will need to switch to built-in mode when you want to use it.
 
 ## Refined stock maps
 
@@ -205,6 +193,10 @@ Halo has a built-in lisp-like scripting language which is used in its campaign m
 
 Unfortunately, enabling MSAA in the `nvidia-settings` control panel resulted in a black screen for Halo. FXAA worked.
 
+---
+
+I hope this has been a useful guide for you. If you have any questions or suggestions, please [get in touch](/about). See you ingame!
+
 [wine]: https://www.winehq.org/
 [hce]: https://www.halopedia.org/Halo_Custom_Edition
 [nouveau]: https://nouveau.freedesktop.org/wiki/
@@ -221,10 +213,7 @@ Unfortunately, enabling MSAA in the `nvidia-settings` control panel resulted in 
 [os-trailer]: https://www.youtube.com/watch?v=TTDaVb19_PQ
 [hac2]: http://198.98.120.174/index.html
 [hac2-mirror]: http://blog.haloanticheat.com/
-[chimera]: https://opencarnage.net/index.php?/topic/6916-chimera-build-49/
-[chimera-tracker]: https://docs.google.com/spreadsheets/d/1WzUCMm99xvPDXumGyC4tmmWb_BmJ-ZR-caQUcdAfeRk/edit#gid=0
-[chimera-581]: https://opencarnage.net/applications/core/interface/file/attachment.php?id=922
-[chimera-docs]: https://docs.google.com/document/d/1OmkwbJTLmuVEqJGTtkLlbRpbdZ_QBHoj86MzC7mXM_g/edit#heading=h.j2mjtefu4gim
+[chimera]: https://opencarnage.net/index.php?/topic/6916-chimera-10-beta/
 [halo-scripts]: https://andrew.gg/scripts/00reference.html
 [refined]: https://www.reddit.com/r/HaloCERefined/
 [refined-mirror]: http://vaporeon.io/halo-refined/
