@@ -4,7 +4,7 @@ date: 2019-05-13
 
 # How to run Halo Custom Edition on Linux with community mods
 
-**Updated 2020-03-19**
+**Updated 2020-04-03**
 
 I've recently gotten [Halo Custom Edition][hce] working well on my Linux desktop, so I want to document and share the process. Custom Edition is a standalone version of Halo PC (a.k.a. "retail") which supports user-created maps and an editing kit (HEK).
 
@@ -219,5 +219,5 @@ I hope this has been a useful guide for you. If you have any questions or sugges
 [refined-mirror]: http://vaporeon.io/halo-refined/
 [refined-sp-1]: https://www.reddit.com/r/HaloCERefined/comments/9l9ujl/downloads/
 [refined-sp-2]: https://haloce3.com/downloads/singleplayer/modified-singleplayer/refined-halo-1-singleplayer-maps/
-[refined-mp]: http://vaporeon.io/hosted/halo/archives/haloce_mp_semirefined_r13_en.7z
+[refined-mp]: http://vaporeon.io/hosted/halo/archives/haloce_mp_semirefined.7z
 [refined-ui]: http://vaporeon.io/hosted/halo/archives/haloce_stock_ui_fixed_v3.7z
