@@ -39,11 +39,11 @@
     "markdown-it-katex": "^2.0.3",
     "ramda": "^0.25.0",
     "react": "^16.2.0",
-    "react-dom": "^16.3.2",
+    "react-dom": "^16.13.1",
     "rss": "^1.2.2",
     "t3h-ui": "https://s3.amazonaws.com/csauve-npm-packages/t3h-ui-1.1.0.tgz"
   },
   "dependencies": {
-    "http-server": "^0.11.1"
+    "http-server": "^0.12.1"
   }
 }
