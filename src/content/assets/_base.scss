@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $bg-page;
+  color: $fg-content;
+  line-height: $line-height-std;
+  font-size: $font-size-std;
+  font-family: $font-family-std;
+}
+
+@media (max-width: $small-screen-width) {
+  body {
+    font-size: $font-size-small;
+  }
+}
+
+a {
+  color: $fg-accent-primary;
+  text-decoration: underline;
+
+  &:link {
+    color: $fg-accent-primary;
+  }
+
+  &:visited {
+    // color: $fg-accent-secondary;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+//link protocol styling:
+a[href^="mailto:"]:after {
+  content: "📧";
+  vertical-align: super;
+  font-size: 50%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-header;
+  font-family: $font-family-heading;
+  line-height: 1.25;
+  margin-bottom: 0.5em;
+  text-rendering: optimizelegibility;
+}
+
+//steps of 0.5/3
+h1 {font-size: 2.00em;}
+h2 {font-size: 1.50em;}
+h3 {font-size: 1.33em;}
+h4 {font-size: 1.17em;}
+h5 {font-size: 1.00em;}
+h6 {font-size: 0.83em;}
+
+img, video, iframe, canvas {
+  max-width: 100%;
+  margin: 1em 0;
+  display: block;
+}
+
+code, pre {
+  font-family: $font-family-code;
+  font-size: $font-size-code;
+  background: $bg-inset;
+}
+
+code {
+  padding: 0.2em;
+}
+
+pre, p code {
+  border-radius: $border-radius-small;
+  border: 1px solid $panel-border-color;
+}
+
+pre {
+  padding: 1em;
+  line-height: $line-height-code;
+  border-left-width: 4px;
+  overflow-x: auto;
+  code {
+    padding: 0;
+  }
+}
+
+hr {
+  border: none;
+  border-bottom: 2px solid $fg-minor;
+  opacity: $faded-opacity;
+}
+
+small {
+  color: $fg-minor;
+}
+
+aside {
+  float: right;
+  max-width: 25%;
+  margin-left: 1em;
+}
+
+figure {
+  display: inline-block;
+  background: $bg-inset;
+  padding: 0.01px 1em;
+  margin: 1em 0;
+}
+
+blockquote {
+  font-style: italic;
+  background: $bg-inset;
+  margin: 1em;
+  padding: 0.01px 1em;
+}
+
+figcaption {
+  margin: 1em 0;
+  font-size: $font-size-code;
+  line-height: $line-height-code;
+}
+
+.feather {
+  width: 1em;
+  height: 1em;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  vertical-align: sub;
+}
+
+.flex-1 {
+  flex: 1 !important;
+}
+
+.flex-2 {
+  flex: 2 !important;
+}
+
+.flex-3 {
+  flex: 3 !important;
+}
+
+.flex-4 {
+  flex: 4 !important;
+}

@@ -4,7 +4,8 @@
   "description": "Personal blog of Connor Sauve",
   "main": "src/build.js",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "dev": "gulp dev"
   },
   "repository": {
     "type": "git",
@@ -20,30 +21,24 @@
   },
   "homepage": "https://github.com/csauve/blog#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "commonmark-helpers": "^0.4.1",
+    "common-tags": "^1.8.0",
+    "del": "^6.0.0",
+    "express": "^4.17.1",
+    "feather-icons": "^4.28.0",
     "front-matter": "^2.3.0",
-    "gulp": "^4.0.0",
+    "gulp": "^4.0.2",
     "gulp-cli": "^2.0.1",
     "gulp-concat": "^2.6.1",
-    "gulp-rename": "^1.2.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
     "gulp-transform": "^3.0.5",
-    "gulp-uglify": "^3.0.0",
-    "highlight.js": "^9.12.0",
+    "gulp-uglify": "^3.0.2",
+    "highlight.js": "^10.2.0",
     "markdown-it": "^8.4.1",
     "markdown-it-emoji": "^1.4.0",
-    "markdown-it-katex": "^2.0.3",
     "ramda": "^0.25.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.13.1",
     "rss": "^1.2.2",
-    "t3h-ui": "https://s3.amazonaws.com/csauve-npm-packages/t3h-ui-1.1.0.tgz"
-  },
-  "dependencies": {
-    "http-server": "^0.12.1"
+    "serve-static": "^1.14.1",
+    "three": "^0.125.2"
   }
 }

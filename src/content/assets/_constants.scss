@@ -1,0 +1,33 @@
+$padding-std: 12px !default;
+$bg-page: #efeae4 !default;
+// #29312c
+$bg-content: none !default;
+$fg-content: #181717 !default;
+$fg-header: #181717 !default;
+$fg-minor: #848484 !default;
+$bg-nav: none !default;
+$border-radius-small: 4px;
+$panel-border-color: #bab5b0 !default;
+$fg-accent-primary: #005f71 !default;
+$fg-accent-secondary: #ec402f !default;
+$faded-opacity: 0.3 !default;
+$line-height-std: 1.5em !default;
+$line-height-code: 1.2em !default;
+$font-size-std: 18px !default;
+$font-size-small: 16px !default;
+$font-size-code: 0.88em !default;
+$font-weight-header: bold !default;
+$bg-inset: #ffffff !default;
+$transition-time: 0.5s !default;
+$font-family-std: "Avenir", "Helvetica", sans-serif !default;
+$font-family-heading: "Avenir", "Helvetica", sans-serif !default;
+$font-family-code: "JuliaMono", Menlo, Consolas, Monaco, monospace !default;
+$small-screen-width: 550px !default;
+$centered-content-width: 850px !default;
+
+@mixin centered-content() {
+  padding: 0 $padding-std;
+  max-width: $centered-content-width;
+  margin-left: auto;
+  margin-right: auto;
+}

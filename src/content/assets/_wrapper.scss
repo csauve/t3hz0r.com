@@ -1,0 +1,91 @@
+.site-navigation {
+  background: $bg-nav;
+
+  .nav-elements {
+    @include centered-content();
+    display: flex;
+    padding: $padding-std;
+  }
+
+  a {
+    color: $fg-header;
+    font-weight: bold;
+    &:visited {
+      color: $fg-header;
+    }
+  }
+
+  #nav-links {
+    margin-left: auto;
+
+    & > ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      & > li {
+        display: inline-block;
+        margin-left: 1em;
+      }
+    }
+  }
+}
+
+.main-content {
+  @include centered-content();
+  background: $bg-content;
+}
+
+.main-header, .main-content {
+  display: flow-root;
+}
+
+
+@keyframes PULSE {
+  0% {font-size: 100%;}
+  50% {font-size: 150%;}
+  100% {font-size: 100%;}
+}
+
+#home-link {
+  padding-left: 2em;
+  background-image: url("/assets/favicon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+
+  display: flex;
+  align-content: center;
+  width: 3em;
+  border-bottom: none;
+  font-family: $font-family-code;
+  text-decoration: none;
+  color: $fg-content;
+
+  #z0r {
+    animation-delay: 0.4s;
+  }
+
+  &:hover #t3h, &:hover #z0r {
+    animation-name: PULSE;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+.article-header {
+  color: $fg-minor;
+}
+
+.main-header {
+  position: relative;
+}
+
+@media (max-width: $small-screen-width) {
+  #home-link {
+    #t3h, #z0r {
+      display: none;
+    }
+  }
+}
