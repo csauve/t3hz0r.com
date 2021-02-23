@@ -139,6 +139,43 @@ figcaption {
   vertical-align: sub;
 }
 
+.preview-cards.alternating .preview-card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.preview-card {
+  display: flex;
+  margin-bottom: $padding-large;
+  align-items: stretch;
+  overflow: hidden;
+  background: $bg-inset;
+  border: 1px solid $panel-border-color;
+  border-radius: $border-radius-small;
+
+  .preview-image {
+    flex: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 200px;
+    width: 100%;
+    padding: 0 $padding-std;
+  }
+
+  .preview-text {
+    flex: 1;
+    width: 100%;
+    padding: 0 $padding-std;
+    display: flow-root;
+  }
+}
+
+@media (max-width: $small-screen-width) {
+  .preview-card {
+    flex-direction: column !important;
+  }
+}
+
 .flex-1 {
   flex: 1 !important;
 }

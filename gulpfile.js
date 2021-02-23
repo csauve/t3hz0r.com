@@ -1,6 +1,8 @@
+const path = require("path");
+const fs = require("fs");
 const gulp = require("gulp");
 const del = require("del");
-const sass = require("gulp-sass");
+const sass = require("sass");
 const uglify = require("gulp-uglify");
 const express = require("express");
 const serveStatic = require("serve-static");
@@ -23,6 +25,7 @@ const paths = {
   jsAssets: [
     "./src/content/**/*.js",
   ],
+  sassEntry: "./src/content/assets/blog.scss",
   sassAssets: [
     "./src/content/**/*.scss",
   ],
@@ -44,9 +47,20 @@ function copyStatic() {
 }
 
 function buildSassAssets() {
-  return gulp.src(paths.sassAssets)
-    .pipe(sass())
-    .pipe(gulp.dest(paths.dist));
+  return new Promise((resolve, reject) => {
+   sass.render({file: paths.sassEntry, outputStyle: "compressed"}, (err, res) => {
+     if (err) {
+       reject(err);
+     } else {
+       const outDir = path.join(paths.dist, "assets");
+       if (!fs.existsSync(outDir)) {
+         fs.mkdirSync(outDir, {recursive: true});
+       }
+       fs.writeFileSync(path.join(outDir, "blog.css"), res.css, "utf8");
+       resolve();
+     }
+   });
+ });
 }
 
 function buildJsAssets() {

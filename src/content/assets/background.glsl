@@ -39,7 +39,7 @@ float scene(vec2 pt, float t) {
 void main() {
   float dist = scene(gl_FragCoord.xy, timeSec * 0.04);
   vec2 screenSpace = gl_FragCoord.xy / canvasSize + 0.5 * 0.5;
-  float fadeIn = min(0.25 * screenSpace.y, timeSec / 4.0);
+  float fadeIn = min(0.1 * screenSpace.y, timeSec / 4.0);
   if (dist < 0.5) {
     gl_FragColor = vec4(vec3(10.0 / 255.0, 129.0 / 255.0, 146.0 / 255.0) * fadeIn, fadeIn);
   } else {

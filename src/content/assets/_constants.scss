@@ -1,4 +1,5 @@
 $padding-std: 12px !default;
+$padding-large: 24px !default;
 $bg-page: #efeae4 !default;
 // #29312c
 $bg-content: none !default;
@@ -19,11 +20,11 @@ $font-size-code: 0.88em !default;
 $font-weight-header: bold !default;
 $bg-inset: #ffffff !default;
 $transition-time: 0.5s !default;
-$font-family-std: "Avenir", "Helvetica", sans-serif !default;
-$font-family-heading: "Avenir", "Helvetica", sans-serif !default;
+$font-family-std: "Avenir", "Noto Sans", "Helvetica", sans-serif !default;
+$font-family-heading: $font-family-std;
 $font-family-code: "JuliaMono", Menlo, Consolas, Monaco, monospace !default;
 $small-screen-width: 550px !default;
-$centered-content-width: 850px !default;
+$centered-content-width: 900px !default;
 
 @mixin centered-content() {
   padding: 0 $padding-std;
