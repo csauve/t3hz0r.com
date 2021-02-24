@@ -59,7 +59,7 @@ Painting the ground map was made easy using Blender's texture paint mode and a s
 
 I also used this tool to paint basic foot paths into the RGB channels and ensure that paths were continuous as they passed from one UV island to the next. Later, I brought the base map into Krita for its more powerful brushes and further detailed the texture. A similar process was used on the green exterior metal siding of the power plant; it's a large blend map where I've painted ice on upper edges of the panels and windward sides.
 
-I can't remember why it became a thing, but then Fleetwire insisted this map have a couch somewhere and I of course had to indulge the guy. I was already rushing to complete the map in time for the contest, but I needed a change from the type of work I was doing and ended up modeling a low-poly couch. I then sculping it so I could bake some AO and lighting into a diffuse map (CE doesn't support normal maps on scenery objects) because I wasn't confident I could paint convincing folds in the faux-leather.
+I can't remember why it became a thing, but then Fleetwire insisted this map have a couch somewhere and I of course had to indulge the guy. I was already rushing to complete the map in time for the contest, but I needed a change from the type of work I was doing and ended up modeling a low-poly couch. I then sculpted it so I could bake some AO and lighting into a diffuse map (CE doesn't support normal maps on scenery objects) because I wasn't confident I could paint convincing folds in the faux-leather.
 
 [![](pics/couch.jpg)](pics/couch.jpg)
 
