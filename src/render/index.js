@@ -5,14 +5,14 @@ const {html} = require("common-tags");
 
 function parsePage(fileContents, relativePath) {
   const {attributes: meta, body: md} = fm(fileContents);
-  const indexIndex = relativePath.indexOf("index.html");
+  const indexIndex = relativePath.indexOf("index.md");
 
   return {
     ...meta,
     dateIso: meta.date ? meta.date.toISOString().substring(0, 10) : null,
     title: meta.title || "Blog",
     template: meta.template || "post",
-    path: indexIndex == -1 ? relativePath : relativePath.substring(0, indexIndex),
+    path: (indexIndex == -1 ? relativePath : relativePath.substring(0, indexIndex)).replace(/\\/g, "/"),
     bodyHtml: renderMd(md),
   };
 }
