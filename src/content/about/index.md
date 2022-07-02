@@ -3,7 +3,7 @@ title: About
 template: post
 ---
 
-You've reached my personal site, welcome! I'm Connor Sauve, but I also go by _Conscars_ and _Con_ online. I'm a software developer hailing from Victoria, Canada. I love the outdoors, travel, and anything that combines creativity and tech. I studied CSC at UVic and joined Amazon subsidiary [AbeBooks.com](https://www.abebooks.com/) in 2014. All opinions are my own.
+You've reached my personal site, welcome! My name's Connor, but I also go by _Conscars_ or _Con_ online. I'm a software developer hailing from Victoria, Canada and current. I love the outdoors, travel, and anything that combines creativity and tech. All opinions are my own.
 
 ## Social
 * **Email**: [contact@t3hz0r.com](mailto:contact@t3hz0r.com)
